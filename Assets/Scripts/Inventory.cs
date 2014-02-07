@@ -1,0 +1,54 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class Inventory : MonoBehaviour {
+
+	Vector3 hidden = new Vector3 (0,5.5f,10);
+	Vector3 shown = new Vector3 (0, 4.1f, 10);
+	RaycastHit hit;
+	public int speed = 3;
+	ArrayList items = new ArrayList();
+
+	// Use this for initialization
+	void Start () {
+	
+	}
+	
+	// Update is called once per frame
+	void Update () {
+
+		showUnshow();
+
+		//foreach
+	}
+
+	void showUnshow(){
+		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+		
+		if (Physics.Raycast(ray, out hit)) {
+			
+			if (hit.collider.tag=="Inventory" || items.Contains(hit.collider.gameObject)){
+				if (Vector3.Distance(transform.localPosition, shown) > 0.1f){
+					transform.localPosition += Vector3.down * Time.deltaTime * speed;
+					foreach (GameObject item in items)
+						item.transform.position += Vector3.down * Time.deltaTime * speed;
+				}
+				//transform.localPosition = shown;
+			}
+			else{
+				if (Vector3.Distance(transform.localPosition, hidden) > 0.1f){
+					transform.localPosition += Vector3.up * Time.deltaTime * speed;
+					foreach (GameObject item in items)
+						item.transform.position += Vector3.up * Time.deltaTime * speed;
+				}
+				//transform.localPosition = hidden;
+			}
+		}
+	}
+
+	public void addItem(GameObject item){
+		items.Add(item);
+		item.transform.position= new Vector3( transform.position.x, transform.position.y, -0.5f);
+		item.transform.localScale = item.GetComponent<Interaction>().invScale;
+	}
+}
