@@ -7,6 +7,7 @@ public class PointClick : MonoBehaviour {
 	bool move = false;
 	RaycastHit hit;
 	Interaction interactiveobject;
+	GameObject selectedItem;
 
 	public float speed = 1f;
 	public float yadjust = 1f;
@@ -33,11 +34,17 @@ public class PointClick : MonoBehaviour {
 
 					if (hit.collider.tag=="Interactive"){
 						interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
-						target= interactiveobject.getWalkPoint();
-						target.z = -1;
-						//hit.collider.gameObject.GetComponent<Interaction>().action();
-						//canMove = false;
-						move=true;
+						if (!hit.collider.gameObject.GetComponent<Pickable>().inInventory){
+							target= interactiveobject.getWalkPoint();
+							target.z = -1;
+							//hit.collider.gameObject.GetComponent<Interaction>().action();
+							//canMove = false;
+							move=true;
+						}
+						else {
+							canMove= false;
+							interaction();
+						}
 					}
 				}
 				
@@ -72,6 +79,24 @@ public class PointClick : MonoBehaviour {
 				
 			}
 		}
+		else{
+			if (selectedItem!=null){
+				if (Input.GetMouseButtonDown(0))
+				{
+					Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
+					
+					if (Physics.Raycast(ray, out hit)) {
+						
+						if (hit.collider.tag=="Interactive"){
+							//call interaction code
+							selectedItem.GetComponent<Pickable>().useWith(hit.collider.gameObject);
+							activate();
+						}
+					}
+					
+				}
+			}
+		}
 	}
 
 	public void activate(){
@@ -81,5 +106,9 @@ public class PointClick : MonoBehaviour {
 	private void interaction(){
 		interactiveobject.action();
 		interactiveobject=null;
+	}
+
+	public void usingItem(GameObject item){
+		selectedItem = item;
 	}
 }

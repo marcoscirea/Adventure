@@ -48,7 +48,20 @@ public class Inventory : MonoBehaviour {
 
 	public void addItem(GameObject item){
 		items.Add(item);
-		item.transform.position= new Vector3( transform.position.x, transform.position.y, -0.5f);
-		item.transform.localScale = item.GetComponent<Interaction>().invScale;
+		//item.transform.position= new Vector3( transform.position.x, transform.position.y, -0.5f);
+		item.transform.localScale = item.GetComponent<Pickable>().invScale;
+		updateItems ();
+	}
+
+	public void updateItems(){
+		float l = items.Count;
+		if (l > 0) {
+			for (int i = 0; i<l; i++) {
+				GameObject tmp = items[i] as GameObject;
+				//Debug.Log ((l-1)/2 + ";" + i);
+				tmp.transform.position = transform.position + Vector3.left * ((l-1)/2) + Vector3.right * ( i  );
+			}
+			transform.localScale = new Vector3( l * 1.5f, transform.localScale.y, transform.localScale.z);
+		}
 	}
 }

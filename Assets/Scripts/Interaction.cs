@@ -1,35 +1,23 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
-public class Interaction : MonoBehaviour {
+public abstract class Interaction : MonoBehaviour {
 
 	public DialogueManager dm;
 	Vector3 walkpoint;
-	public bool dialogue = true;
-	Vector3 initScale;
-	public Vector3 invScale;
+	//Vector3 initScale;
 
 	// Use this for initialization
 	void Start () {
 		dm = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
 		walkpoint=transform.FindChild("Walk Point").transform.position;
-		initScale = transform.localScale;
+		//initScale = transform.localScale;
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-	}
+	public abstract void Update ();
 
-	public void action(){
-		if (dialogue)
-			//interactive object is NPC
-			dm.startDialogue(3);
-		else {
-			//interactive object is item
-			GameObject.FindGameObjectWithTag("Inventory").GetComponent<Inventory>().addItem(gameObject);
-		}
-	}
+	public abstract void action ();
 
 	public Vector3 getWalkPoint(){
 		return walkpoint;
