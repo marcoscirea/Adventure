@@ -8,6 +8,7 @@ public class Inventory : MonoBehaviour {
 	RaycastHit hit;
 	public int speed = 3;
 	ArrayList items = new ArrayList();
+	bool noUpdate = false;
 
 	// Use this for initialization
 	void Start () {
@@ -19,7 +20,8 @@ public class Inventory : MonoBehaviour {
 
 		showUnshow();
 
-		//foreach
+		if (!noUpdate)
+			updateItems ();
 	}
 
 	void showUnshow(){
@@ -50,7 +52,13 @@ public class Inventory : MonoBehaviour {
 		items.Add(item);
 		//item.transform.position= new Vector3( transform.position.x, transform.position.y, -0.5f);
 		item.transform.localScale = item.GetComponent<Pickable>().invScale;
-		updateItems ();
+		//updateItems ();
+	}
+
+	public void removeItem(GameObject item){
+		items.Remove (item);
+		Destroy (item);
+		//updateItems ();
 	}
 
 	public void updateItems(){
@@ -59,9 +67,13 @@ public class Inventory : MonoBehaviour {
 			for (int i = 0; i<l; i++) {
 				GameObject tmp = items[i] as GameObject;
 				//Debug.Log ((l-1)/2 + ";" + i);
-				tmp.transform.position = transform.position + Vector3.left * ((l-1)/2) + Vector3.right * ( i  );
+				tmp.transform.position = transform.position + Vector3.left * ((l-1)/2) + Vector3.right * ( i  ) + Vector3.back * 0.5f;
 			}
-			transform.localScale = new Vector3( l * 1.5f, transform.localScale.y, transform.localScale.z);
+			transform.localScale = new Vector3( l + 0.5f, transform.localScale.y, transform.localScale.z);
 		}
+	}
+
+	public void stopUpdate(bool yes){
+		noUpdate = yes;
 	}
 }

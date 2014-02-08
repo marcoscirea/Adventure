@@ -19,6 +19,8 @@ public abstract class Interaction : MonoBehaviour {
 
 	public abstract void action ();
 
+	public abstract void secondary ();
+
 	public Vector3 getWalkPoint(){
 		return walkpoint;
 	}

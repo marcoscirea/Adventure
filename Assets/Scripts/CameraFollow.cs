@@ -41,8 +41,8 @@ public class CameraFollow : MonoBehaviour {
 			Ray rr = new Ray(camera.ViewportToWorldPoint(new Vector3(1, 0.5f, camera.nearClipPlane)) + new Vector3(0.001f,0,0), transform.forward);
 
 			if((transform.position.x-target.x < 0.01 && transform.position.x-target.x > -0.01) ||
-			   !Physics.Raycast(rl) ||
-			   !Physics.Raycast(rr)
+			   (!Physics.Raycast(rl) && target.x <transform.position.x ) ||
+			   (!Physics.Raycast(rr) && target.x >transform.position.x )
 			   ){
 				
 				move=false;

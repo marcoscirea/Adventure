@@ -12,6 +12,7 @@ public class PointClick : MonoBehaviour {
 	public float speed = 1f;
 	public float yadjust = 1f;
 	public bool canMove = true;
+	bool nowMove = false;
 
 	// Use this for initialization
 	void Start () {
@@ -34,7 +35,8 @@ public class PointClick : MonoBehaviour {
 
 					if (hit.collider.tag=="Interactive"){
 						interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
-						if (!hit.collider.gameObject.GetComponent<Pickable>().inInventory){
+						if (hit.collider.gameObject.GetComponent<Pickable>()==null || 
+							!hit.collider.gameObject.GetComponent<Pickable>().inInventory){
 							target= interactiveobject.getWalkPoint();
 							target.z = -1;
 							//hit.collider.gameObject.GetComponent<Interaction>().action();
@@ -95,12 +97,23 @@ public class PointClick : MonoBehaviour {
 					}
 					
 				}
+				if (Input.GetMouseButtonDown(1)){
+					selectedItem.GetComponent<Pickable>().secondary();
+					activate();
+				}
 			}
 		}
 	}
 
+	void LateUpdate(){
+		if (nowMove) {
+			canMove = true;
+			nowMove = false;
+		}
+	}
+
 	public void activate(){
-		canMove = true;
+		nowMove = true;
 	}
 
 	private void interaction(){
