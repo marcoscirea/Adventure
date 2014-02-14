@@ -30,7 +30,7 @@ public class NextGenRpgDialogueGui : MonoBehaviour {
 	
 	private string _text;
 	private string[] _choices;
-
+	
 	// Use this for initialization
 	void Start () {
 		addDialoguerEvents();
@@ -67,7 +67,6 @@ public class NextGenRpgDialogueGui : MonoBehaviour {
 	private void onDialogueEndedHandler(){
 		_dialogue = false;
 		_showWindow = false;
-		GameObject.Find("Character").GetComponent<PointClick>().activate();
 	}
 	
 	private void onDialogueInstantlyEndedHandler(){

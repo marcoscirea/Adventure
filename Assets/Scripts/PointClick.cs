@@ -14,6 +14,8 @@ public class PointClick : MonoBehaviour {
 	public bool canMove = true;
 	bool nowMove = false;
 
+	TCPclient client;
+
 	// Use this for initialization
 	void Start () {
 		interactiveobject=null;

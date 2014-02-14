@@ -4,4 +4,8 @@ public enum DialoguerDialogues{
 	OldSchoolRPG = 1,
 	NextGen = 2,
 	Test = 3,
+	Missingeyes = 4,
+	Missingmouth = 5,
+	Missingnose = 6,
+	Snowmancomplete = 7,
 }

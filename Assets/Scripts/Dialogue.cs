@@ -16,4 +16,8 @@ public class Dialogue : Interaction {
 	public override void secondary(){
 		//description code if necessary
 	}
+
+	public void startDialogue(int n){
+		dm.startDialogue(n);
+	}
 }
