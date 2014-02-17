@@ -64,4 +64,4 @@ public class TCPclient : MonoBehaviour {
 		mySocket.Close();
 		socketReady = false;
 	}
-} // end class s_TCP
+} // end class
