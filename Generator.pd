@@ -1,4 +1,4 @@
-#N canvas 505 126 1164 719 10;
+#N canvas -8 -8 1280 718 10;
 #N canvas 349 188 713 651 32counter 0;
 #X obj 301 409 + 1;
 #X obj 250 405 float;
@@ -55,7 +55,6 @@
 #X connect 15 0 22 0;
 #X connect 16 0 19 0;
 #X connect 16 0 21 0;
-#X connect 16 0 29 0;
 #X connect 17 0 18 0;
 #X connect 17 0 7 0;
 #X connect 17 0 26 0;
@@ -214,10 +213,10 @@
 #X obj 204 171 bng 15 50 20 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X msg 231 466 set \$1;
-#X msg 226 505 0.21875;
+#X msg 226 505 0.1875;
 #X obj 231 442 *;
 #X obj 228 116 vsl 8 64 0.5 4 0 1 empty empty g 0 -8 0 8 -262144 -1
--1 2250 1;
+-1 900 1;
 #X obj 100 481 t f b;
 #X floatatom 201 134 3 12 128 0 rg - -;
 #X msg 425 190 66;
@@ -1417,13 +1416,13 @@ and predelay.;
 #X obj -36 214 * 12;
 #X obj -62 240 +;
 #X obj 192 115 vsl 15 81 0 120 0 1 empty empty cf 2 4 0 8 -262144 -1
--1 5200 1;
+-1 4467 1;
 #X obj 134 471 *;
 #X obj 209 115 vsl 15 81 0 1 0 1 empty empty rs 2 4 0 8 -262144 -1
 -1 896 1;
 #X obj 136 449 line 0 1;
 #X obj 226 115 vsl 15 81 0 120 0 1 empty empty ev 2 4 0 8 -262144 -1
--1 2900 1;
+-1 3533 1;
 #X obj 139 527 *;
 #X obj 120 346 t b b;
 #X obj 139 580 mtof;
@@ -1454,7 +1453,7 @@ and predelay.;
 #X obj 285 69 * 60;
 #X obj 145 29 clip 0 1;
 #X obj 145 51 * 60;
-#X msg 152 392 0.109375;
+#X msg 152 392 0.125;
 #X obj 69 200 t f f;
 #X msg 170 369 set \$1;
 #N canvas 267 281 695 417 spt-osc1 0;
@@ -1690,7 +1689,7 @@ and predelay.;
 -1 -1 384 1;
 #X obj -160 232 * -1;
 #X obj 140 115 vsl 15 61 0 1 0 1 empty empty fm 2 4 0 8 -262144 -1
--1 4896 1;
+-1 4920 1;
 #X floatatom 140 184 4 0.25 8 0 - - -;
 #N canvas 411 176 695 417 spt-osc2 0;
 #N canvas 181 481 492 405 sawtooth1 0;
@@ -1931,7 +1930,7 @@ and predelay.;
 #X obj -95 381 == 0;
 #X obj -202 496 *~;
 #X msg 138 216 set \$1;
-#X msg 132 257 2.5;
+#X msg 132 257 2;
 #X obj 318 237 loadbang;
 #X msg -18 498 5;
 #X obj -102 532 spigot;
@@ -2352,10 +2351,10 @@ and predelay.;
 #X obj 204 171 bng 15 50 20 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X msg 231 466 set \$1;
-#X msg 226 505 0.53;
+#X msg 226 505 0.9375;
 #X obj 231 442 *;
 #X obj 228 116 vsl 8 64 0.5 4 0 1 empty empty g 0 -8 0 8 -262144 -1
--1 2916 1;
+-1 1350 1;
 #X obj 100 481 t f b;
 #X floatatom 201 134 3 12 128 0 rg - -;
 #X msg 425 190 64;
@@ -2586,10 +2585,10 @@ result. (slightly different sum for note level);
 #X obj 204 171 bng 15 50 20 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X msg 231 466 set \$1;
-#X msg 226 505 0.7;
+#X msg 226 505 1.05;
 #X obj 231 442 *;
 #X obj 228 116 vsl 8 64 0.5 4 0 1 empty empty g 0 -8 0 8 -262144 -1
--1 1980 1;
+-1 1260 1;
 #X obj 100 481 t f b;
 #X floatatom 201 134 3 12 128 0 rg - -;
 #X msg 425 190 128;
@@ -2676,11 +2675,11 @@ result. (slightly different sum for note level);
 #X restore 154 73 pd generator3;
 #N canvas 402 45 843 538 doubleosc1t 0;
 #X obj 53 296 moses 0.001;
-#X msg 76 416 0 1131.65;
+#X msg 76 416 0 576.48;
 #X msg 50 364 set 0 \$1;
 #X obj 0 59 clip 0 1;
 #X obj 243 115 vsl 15 81 0.2 1 0 1 empty empty dc 2 4 0 8 -262144 -1
--1 3800 1;
+-1 2900 1;
 #X obj 123 125 vradio 12 1 1 6 empty empty wav -2 -4 0 8 -262144 -1
 -1 3;
 #X obj 102 113 vradio 15 1 1 3 empty empty okt 0 52 0 8 -262144 -1
@@ -2689,13 +2688,13 @@ result. (slightly different sum for note level);
 #X obj -36 214 * 12;
 #X obj -62 240 +;
 #X obj 192 115 vsl 15 81 0 120 0 1 empty empty cf 2 4 0 8 -262144 -1
--1 2200 1;
+-1 3200 1;
 #X obj 134 471 *;
 #X obj 209 115 vsl 15 81 0 1 0 1 empty empty rs 2 4 0 8 -262144 -1
--1 2600 1;
+-1 1280 1;
 #X obj 136 449 line 0 1;
 #X obj 226 115 vsl 15 81 0 120 0 1 empty empty ev 2 4 0 8 -262144 -1
--1 3200 1;
+-1 2933 1;
 #X obj 139 527 *;
 #X obj 120 346 t b b;
 #X obj 139 580 mtof;
@@ -2726,7 +2725,7 @@ result. (slightly different sum for note level);
 #X obj 285 69 * 60;
 #X obj 145 29 clip 0 1;
 #X obj 145 51 * 60;
-#X msg 152 392 0.53;
+#X msg 152 392 0.3125;
 #X obj 69 200 t f f;
 #X msg 170 369 set \$1;
 #N canvas 267 281 695 417 spt-osc1 0;
@@ -2959,10 +2958,10 @@ result. (slightly different sum for note level);
 #X obj -170 264 +;
 #X obj -104 304 +;
 #X obj 175 115 vsl 15 81 0 0.25 0 1 empty empty dt 2 4 0 8 -262144
--1 -1 3584 1;
+-1 -1 2240 1;
 #X obj -156 241 * -1;
 #X obj 140 115 vsl 15 61 0 1 0 1 empty empty fm 2 4 0 8 -262144 -1
--1 4098 1;
+-1 3906 1;
 #X floatatom 140 184 4 0.25 8 0 - - -;
 #N canvas 411 176 695 417 spt-osc2 0;
 #N canvas 181 481 492 405 sawtooth1 0;
@@ -3180,7 +3179,7 @@ result. (slightly different sum for note level);
 #X restore -130 577 pd spt-osc2;
 #X obj -152 665 *~ 0.5;
 #X obj 158 115 vsl 15 61 0.15 1 0 1 empty empty md 2 4 0 8 -262144
--1 -1 1200 1;
+-1 -1 1271 1;
 #X obj -98 339 mtof;
 #X obj -195 316 *;
 #X obj -195 294 mtof;
@@ -3188,7 +3187,7 @@ result. (slightly different sum for note level);
 #X obj -132 459 +~;
 #X obj -68 131 *;
 #X obj -188 425 *~;
-#X msg -364 519 0 104.858;
+#X msg -364 519 0 118.676;
 #X msg -389 461 set 0 \$1;
 #X obj -314 607 *;
 #X obj -304 552 line 0 1;
@@ -3203,7 +3202,7 @@ result. (slightly different sum for note level);
 #X obj -95 381 == 0;
 #X obj -202 496 *~;
 #X msg 138 216 set \$1;
-#X msg 132 257 4.25;
+#X msg 132 257 4.75;
 #X obj 318 237 loadbang;
 #X msg -18 498 5;
 #X obj -102 532 spigot;
@@ -3486,9 +3485,9 @@ result. (slightly different sum for note level);
 #X obj 243 115 vsl 15 81 0.2 1 0 1 empty empty dc 2 4 0 8 -262144 -1
 -1 4900 1;
 #X obj 123 125 vradio 12 1 1 6 empty empty wav -2 -4 0 8 -262144 -1
--1 5;
+-1 3;
 #X obj 102 113 vradio 15 1 1 3 empty empty okt 0 52 0 8 -262144 -1
--1 1;
+-1 2;
 #X obj -35 191 - 1;
 #X obj -36 214 * 12;
 #X obj -62 240 +;
@@ -3530,7 +3529,7 @@ result. (slightly different sum for note level);
 #X obj 285 69 * 60;
 #X obj 145 29 clip 0 1;
 #X obj 145 51 * 60;
-#X msg 152 392 0.6;
+#X msg 152 392 0.975;
 #X obj 69 200 t f f;
 #X msg 170 369 set \$1;
 #N canvas 266 277 695 417 spt-osc1 0;
@@ -3984,7 +3983,7 @@ result. (slightly different sum for note level);
 #X restore -130 577 pd spt-osc2;
 #X obj -148 652 *~ 0.5;
 #X obj 158 115 vsl 15 61 0.15 1 0 1 empty empty md 2 4 0 8 -262144
--1 -1 1094 1;
+-1 -1 494 1;
 #X obj -98 339 mtof;
 #X obj -195 316 *;
 #X obj -195 294 mtof;
@@ -3992,7 +3991,7 @@ result. (slightly different sum for note level);
 #X obj -132 459 +~;
 #X obj -68 131 *;
 #X obj -188 425 *~;
-#X msg -364 519 0 86.5176;
+#X msg -364 519 0 23.4185;
 #X msg -389 461 set 0 \$1;
 #X obj -314 607 *;
 #X obj -304 552 line 0 1;
@@ -4290,7 +4289,7 @@ result. (slightly different sum for note level);
 #X connect 102 0 101 0;
 #X coords 0 -1 1 1 160 100 1 100 100;
 #X restore 195 277 pd doubleosc1t;
-#N canvas 0 0 722 806 generator4 0;
+#N canvas 0 0 722 732 generator4 0;
 #N canvas 256 70 891 572 dec2sum 0;
 #X obj 104 77 pow 8;
 #X obj 243 -5 inlet;
@@ -4436,10 +4435,10 @@ result. (slightly different sum for note level);
 #X obj 204 171 bng 15 50 20 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X msg 231 466 set \$1;
-#X msg 226 505 0.309375;
+#X msg 226 505 1.01563;
 #X obj 231 442 *;
 #X obj 228 116 vsl 8 64 0.5 4 0 1 empty empty g 0 -8 0 8 -262144 -1
--1 2070 1;
+-1 1350 1;
 #X obj 100 481 t f b;
 #X floatatom 201 134 3 12 128 0 rg - -;
 #X msg 425 190 128;
@@ -4702,7 +4701,7 @@ result. (slightly different sum for note level);
 #X connect 74 0 25 1;
 #X coords 0 -1 1 1 160 100 1 100 100;
 #X restore 360 277 pd adrum;
-#N canvas 316 258 649 492 beatdelay4 0;
+#N canvas 311 110 649 492 beatdelay4 0;
 #X obj 26 93 inlet~;
 #X obj 172 67 inlet;
 #X obj 186 458 outlet~;
@@ -4795,11 +4794,11 @@ result. (slightly different sum for note level);
 #X msg 64 91 74;
 #X obj 192 9 loadbang;
 #X msg 113 63 set \$1;
-#X msg 121 89 89;
+#X msg 121 89 79;
 #X msg 172 64 set \$1;
-#X msg 180 90 59;
+#X msg 180 90 44;
 #X msg 235 63 set \$1;
-#X msg 243 89 94;
+#X msg 243 89 74;
 #X obj 453 37 inlet;
 #X obj 449 71 unpack f f f f;
 #X obj 480 144 r hStrenght;
@@ -5076,7 +5075,7 @@ result. (slightly different sum for note level);
 #X obj 90 478 mod 128;
 #X obj 84 512 / 128;
 #X obj 209 126 vsl 8 50 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 3565 1;
+-1 -1 3971 1;
 #X obj 102 546 *;
 #X obj 155 577 lop~;
 #X obj 150 610 snapshot~;
@@ -5758,7 +5757,7 @@ result.;
 #X connect 100 0 69 0;
 #X coords 0 -1 1 1 220 135 1 100 100;
 #X restore 28 511 pd dualdelay1s;
-#N canvas 523 281 1123 741 emotion 0;
+#N canvas 1276 754 1280 718 emotion 0;
 #X text 117 112 anxious/frantic;
 #X text 116 133 (h valence/l arousal);
 #X text 252 111 exuberance;
@@ -6135,9 +6134,9 @@ result.;
 #X msg 382 603 stop;
 #X obj 295 680 writesf~ 2;
 #X msg 290 555 open aroused/astonished.wav;
-#N canvas 706 116 1006 724 unity 0;
+#N canvas 36 47 1006 724 unity 0;
 #X obj 99 36 netreceive 7778;
-#X obj 224 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 224 74 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 196 98 5 0 0 0 - - -;
 #X obj 39 94 print;
@@ -6170,10 +6169,12 @@ alarmed;
 -1 -1;
 #X obj 890 304 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
+#X obj 239 99 dsp;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 0 1 2 0;
 #X connect 0 1 1 0;
+#X connect 1 0 30 0;
 #X connect 4 0 7 0;
 #X connect 4 0 14 0;
 #X connect 4 0 22 0;

@@ -3,13 +3,15 @@ using System.Collections;
 
 public class DialogueManager : MonoBehaviour {
 
-	public NextGenRpgDialogueGui nextGenRpgDialogue;
+	public CustomGui customDialogue;
 	
 	private readonly string GLOBAL_VARIABLE_SAVE_KEY = "serialized_global_variable_state";
 	
 	//private string returnedString = string.Empty;
 	
 	void Start () {
+
+		customDialogue = GameObject.FindGameObjectWithTag ("Gui").GetComponent<CustomGui> ();
 		
 		// Initialize the Dialoguer
 		Dialoguer.Initialize();
@@ -26,32 +28,10 @@ public class DialogueManager : MonoBehaviour {
 	void Update () {
 		//returnedString = Dialoguer.GetGlobalVariablesState();
 	}
-	
-//	void OnGUI(){
-//		GUI.depth = -10;
-//		
-//		if(GUI.Button (new Rect(25, 25, 125, 30), "Unity GUI")){
-//			Dialoguer.events.ClearAll();
-//			unityDialogue.addDialoguerEvents();
-//			Dialoguer.StartDialogue(0);	// Generic
-//		}
-//		
-//		if(GUI.Button (new Rect(25, 25 + 30 + 10, 125, 30), "Old School RPG")){
-//			Dialoguer.events.ClearAll();
-//			oldRpgDialogue.addDialoguerEvents();
-//			Dialoguer.StartDialogue(DialoguerDialogues.OldSchoolRPG);	// Old SchoolRPG
-//		}
-//		
-//		if(GUI.Button (new Rect(25, 25 + 60 + 20, 125, 30), "NextGen RPG")){
-//			Dialoguer.events.ClearAll();
-//			nextGenRpgDialogue.addDialoguerEvents();
-//			Dialoguer.StartDialogue(2);	// Old SchoolRPG
-//		}
-//	}
 
 	public void startDialogue(int n){
 		Dialoguer.events.ClearAll();
-		nextGenRpgDialogue.addDialoguerEvents();
+		customDialogue.addDialoguerEvents();
 		Dialoguer.StartDialogue(n);	
 	}
 }

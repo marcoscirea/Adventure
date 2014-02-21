@@ -2811,8 +2811,8 @@ the Dialoguer system!</text>
           <id>1</id>
           <type>EndPhase</type>
           <position>
-            <x>584</x>
-            <y>34</y>
+            <x>787</x>
+            <y>26</y>
           </position>
           <outs />
           <advanced>false</advanced>
