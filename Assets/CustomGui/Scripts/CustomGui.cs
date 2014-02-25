@@ -67,6 +67,7 @@ public class CustomGui : MonoBehaviour {
 	private void onDialogueEndedHandler(){
 		_dialogue = false;
 		_showWindow = false;
+		GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
 	}
 	
 	private void onDialogueInstantlyEndedHandler(){
@@ -101,7 +102,8 @@ public class CustomGui : MonoBehaviour {
 	}
 	
 	private void onDialoguerMessageEvent(string message, string metadata){
-		
+		Debug.Log (message);
+		Camera.main.GetComponent<TCPclient>().writeSocket (message);
 	}
 	#endregion
 	

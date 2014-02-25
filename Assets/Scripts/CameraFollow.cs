@@ -40,15 +40,29 @@ public class CameraFollow : MonoBehaviour {
 			Ray rl = new Ray(camera.ViewportToWorldPoint(new Vector3(0, 0.5f, camera.nearClipPlane)) - new Vector3(0.001f,0,0), transform.forward);
 			Ray rr = new Ray(camera.ViewportToWorldPoint(new Vector3(1, 0.5f, camera.nearClipPlane)) + new Vector3(0.001f,0,0), transform.forward);
 
-			if((transform.position.x-target.x < 0.01 && transform.position.x-target.x > -0.01) ||
+			if((transform.position.x-target.x < 0.1 && transform.position.x-target.x > -0.1) ||
 			   (!Physics.Raycast(rl) && target.x <transform.position.x ) ||
 			   (!Physics.Raycast(rr) && target.x >transform.position.x )
 			   ){
 				
 				move=false;
+				velocity=Vector3.zero;
 			}
 			else{
 				goTo(target);
+			}
+
+			//border check
+			float px = player.transform.position.x;
+			if (px < camera.ViewportToWorldPoint(new Vector3(border, 1, camera.nearClipPlane)).x
+			    ){
+				target= new Vector3(px, transform.position.y, transform.position.z);
+				move= true;
+			}
+			if (px > camera.ViewportToWorldPoint(new Vector3(0.8f, 1, camera.nearClipPlane)).x
+			    ){
+				target= new Vector3(px, transform.position.y, transform.position.z);
+				move= true;
 			}
 
 		}

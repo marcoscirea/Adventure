@@ -6,6 +6,8 @@ public class DialogueManager : MonoBehaviour {
 	public CustomGui customDialogue;
 	
 	private readonly string GLOBAL_VARIABLE_SAVE_KEY = "serialized_global_variable_state";
+
+	public bool intro = false;
 	
 	//private string returnedString = string.Empty;
 	
@@ -23,10 +25,17 @@ public class DialogueManager : MonoBehaviour {
 		}
 		//		This can be saved anywhere, and loaded from anywhere the user wishes
 		//		To save the Global Variable State, get it with Dialoguer.GetGlobalVariableState() and save it where you wish
+	
+
 	}
 	
 	void Update () {
 		//returnedString = Dialoguer.GetGlobalVariablesState();
+		if (intro) {
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove=false;
+			startDialogue(8); 
+			intro= false;
+		}
 	}
 
 	public void startDialogue(int n){

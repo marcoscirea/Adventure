@@ -8,4 +8,5 @@ public enum DialoguerDialogues{
 	Missingmouth = 5,
 	Missingnose = 6,
 	Snowmancomplete = 7,
+	Intro = 8,
 }
