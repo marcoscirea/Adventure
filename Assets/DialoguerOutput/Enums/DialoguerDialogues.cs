@@ -9,4 +9,11 @@ public enum DialoguerDialogues{
 	Missingnose = 6,
 	Snowmancomplete = 7,
 	Intro = 8,
+	Snow = 9,
+	Warm = 10,
+	Thesnowmanspeaks = 11,
+	Window = 12,
+	Fireplace = 13,
+	Couch = 14,
+	KitchenDoor = 15,
 }

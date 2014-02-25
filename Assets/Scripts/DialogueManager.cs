@@ -7,7 +7,7 @@ public class DialogueManager : MonoBehaviour {
 	
 	private readonly string GLOBAL_VARIABLE_SAVE_KEY = "serialized_global_variable_state";
 
-	public bool intro = false;
+	public static bool intro = true;
 	
 	//private string returnedString = string.Empty;
 	
@@ -33,12 +33,18 @@ public class DialogueManager : MonoBehaviour {
 		//returnedString = Dialoguer.GetGlobalVariablesState();
 		if (intro) {
 			GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove=false;
-			startDialogue(8); 
+			startDialogue(DialoguerDialogues.Intro); 
 			intro= false;
 		}
 	}
 
 	public void startDialogue(int n){
+		Dialoguer.events.ClearAll();
+		customDialogue.addDialoguerEvents();
+		Dialoguer.StartDialogue(n);	
+	}
+
+	public void startDialogue(DialoguerDialogues n){
 		Dialoguer.events.ClearAll();
 		customDialogue.addDialoguerEvents();
 		Dialoguer.StartDialogue(n);	
