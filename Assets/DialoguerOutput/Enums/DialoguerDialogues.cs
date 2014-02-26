@@ -24,4 +24,6 @@ public enum DialoguerDialogues{
 	Gravel = 21,
 	Sticks = 22,
 	Hat = 23,
+	Interlude = 24,
+	KeepCold = 25,
 }

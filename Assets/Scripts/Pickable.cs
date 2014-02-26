@@ -113,7 +113,5 @@ public class Pickable : Interaction {
 			inventory = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
 		if (dm == null)
 			dm = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
-		if (walkpoint==null)
-			walkpoint=transform.FindChild("Walk Point").transform.position;
 	}
 }

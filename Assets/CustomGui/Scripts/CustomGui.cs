@@ -68,6 +68,10 @@ public class CustomGui : MonoBehaviour {
 		_dialogue = false;
 		_showWindow = false;
 		GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
+
+		//Load new scene when Narrator level is active
+		if(Application.loadedLevelName=="Narrator")
+			Application.LoadLevel("Home");
 	}
 	
 	private void onDialogueInstantlyEndedHandler(){
@@ -103,6 +107,11 @@ public class CustomGui : MonoBehaviour {
 	
 	private void onDialoguerMessageEvent(string message, string metadata){
 		Debug.Log (message);
+
+		if (message == "snowmanComplete") {
+			Application.LoadLevel("Narrator");
+				}
+
 		Camera.main.GetComponent<TCPclient>().writeSocket (message);
 	}
 	#endregion

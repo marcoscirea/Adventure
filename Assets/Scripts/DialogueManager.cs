@@ -11,6 +11,9 @@ public class DialogueManager : MonoBehaviour {
 	public static bool intro = true;
 	public bool testNoIntro = false;
 	public static bool firstSnow = true;
+	public static bool interlude1 = true;
+	public static bool warm =true;
+	public static bool keepCold = true;
 	
 	//private string returnedString = string.Empty;
 	
@@ -47,6 +50,24 @@ public class DialogueManager : MonoBehaviour {
 			startDialogue(DialoguerDialogues.Snow); 
 			firstSnow= false;
 			}
+
+		if (interlude1 && Application.loadedLevelName == "Narrator") {
+			startDialogue(DialoguerDialogues.Interlude); 
+			interlude1= false;
+
+				}
+
+		if (warm && !interlude1 && Application.loadedLevelName == "Home") {
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove=false;
+			startDialogue(DialoguerDialogues.Warm);
+			warm = false;
+		}
+
+		if (keepCold && !warm && Application.loadedLevelName == "Outside") {
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove=false;
+			startDialogue(DialoguerDialogues.KeepCold);
+			keepCold = false;
+				}
 
 		//test for dialoguer variables
 		/*for (int i=0; i<5; i++) {
