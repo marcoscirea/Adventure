@@ -13,6 +13,7 @@ public class PointClick : MonoBehaviour {
 	public float yadjust = 1f;
 	public bool canMove = true;
 	bool nowMove = false;
+	bool objectInteraction = false;
 
 	TCPclient client;
 
@@ -56,32 +57,7 @@ public class PointClick : MonoBehaviour {
 			
 			
 			
-			if(move){
-				
-				transform.LookAt(target);
 
-				//Ray diff = new Ray(transform.position, target);
-
-				//Debug.Log(diff.direction);
-
-				transform.Translate(Vector3.forward *  Time.deltaTime * speed);
-
-
-				
-				if(Vector3.Distance(transform.position, target) < 0.01){
-					
-					move = false;
-
-					if (interactiveobject!=null){
-						canMove=false;
-						interaction();
-					}
-					
-				}
-				
-				
-				
-			}
 		}
 		else{
 			if (selectedItem!=null){
@@ -93,8 +69,14 @@ public class PointClick : MonoBehaviour {
 						
 						if (hit.collider.tag=="Interactive"){
 							//call interaction code
-							selectedItem.GetComponent<Pickable>().useWith(hit.collider.gameObject);
-							activate();
+							//selectedItem.GetComponent<Pickable>().useWith(hit.collider.gameObject);
+							//activate();
+
+							interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
+							target= interactiveobject.getWalkPoint();
+							target.z = -1;
+							move=true;
+							objectInteraction = true;
 						}
 					}
 					
@@ -104,6 +86,43 @@ public class PointClick : MonoBehaviour {
 					activate();
 				}
 			}
+		}
+
+		if(move){
+			
+			transform.LookAt(target);
+			
+			//Ray diff = new Ray(transform.position, target);
+			
+			//Debug.Log(diff.direction);
+			
+			transform.Translate(Vector3.forward *  Time.deltaTime * speed);
+			
+			
+			
+			if(Vector3.Distance(transform.position, target) < 0.01){
+				
+				move = false;
+				
+				if (interactiveobject!=null){
+					if (!objectInteraction){
+						//normal interaction (dialogue, pickup, etc.
+						canMove=false;
+						interaction();
+					}
+					else {
+						//Object interaction
+						selectedItem.GetComponent<Pickable>().useWith(interactiveobject.gameObject);
+						activate();
+						selectedItem=null;
+						objectInteraction=false;
+					}
+				}
+				
+			}
+			
+			
+			
 		}
 	}
 
