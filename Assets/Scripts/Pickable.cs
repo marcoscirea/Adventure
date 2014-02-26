@@ -33,7 +33,7 @@ public class Pickable : Interaction {
 
 		if (!inInventory) {
 			inventory.addItem (gameObject);
-			GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
+			//GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
 			inInventory = true;
 
 			//dialogue when picking up item
