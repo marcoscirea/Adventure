@@ -6,6 +6,10 @@ public class Dialogue : Interaction {
 	//public int dialogueNum = 3;
 	public DialoguerDialogues dialogue;
 
+	protected override void doStart ()
+	{
+
+	}
 	public override void Update ()
 	{
 

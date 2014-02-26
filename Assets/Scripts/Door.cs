@@ -5,6 +5,10 @@ public class Door : Interaction {
 
 	public string to;
 
+	protected override void doStart ()
+	{
+		
+	}
 	// Update is called once per frame
 	public override void Update () {
 	

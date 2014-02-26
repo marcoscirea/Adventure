@@ -8,13 +8,22 @@ public class Pickable : Interaction {
 	public bool inInventory = false;
 	public bool clicked = false;
 	Inventory inventory;
-	public Sprite[] snowman;
+	public DialoguerDialogues dialogue;
+
+	protected override void doStart(){
+		if (inventory == null)
+			inventory = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
+
+		//check if object already picked up
+		if (inventory.hasBeenPickedUp(gameObject.name))
+			Destroy(gameObject);
+	}
 
 	public override void Update(){
-			if (inventory == null)
-						inventory = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
 
-			if (clicked) {
+		checkForChangedObjects ();
+
+		if (clicked) {
 						inventory.stopUpdate (true);
 						transform.position = new Vector3 (Camera.main.ScreenToWorldPoint (Input.mousePosition).x, Camera.main.ScreenToWorldPoint (Input.mousePosition).y, -0.5f);
 				}
@@ -26,6 +35,9 @@ public class Pickable : Interaction {
 			inventory.addItem (gameObject);
 			GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
 			inInventory = true;
+
+			//dialogue when picking up item
+			dm.startDialogue(dialogue);
 		}
 		else{
 			clicked = true;
@@ -94,4 +106,14 @@ public class Pickable : Interaction {
 		else
 			secondary();
 		}
+
+	void checkForChangedObjects(){
+		//needed when changing scene to have the new dialogue manager etc
+		if (inventory == null)
+			inventory = GameObject.FindGameObjectWithTag ("Inventory").GetComponent<Inventory> ();
+		if (dm == null)
+			dm = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
+		if (walkpoint==null)
+			walkpoint=transform.FindChild("Walk Point").transform.position;
+	}
 }

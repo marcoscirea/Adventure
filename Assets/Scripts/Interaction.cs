@@ -4,7 +4,7 @@ using System.Collections;
 public abstract class Interaction : MonoBehaviour {
 
 	public DialogueManager dm;
-	Vector3 walkpoint;
+	public Vector3 walkpoint;
 	//Vector3 initScale;
 
 	// Use this for initialization
@@ -12,8 +12,11 @@ public abstract class Interaction : MonoBehaviour {
 		dm = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
 		walkpoint=transform.FindChild("Walk Point").transform.position;
 		//initScale = transform.localScale;
+		doStart ();
 	}
-	
+
+	protected abstract void doStart();
+
 	// Update is called once per frame
 	public abstract void Update ();
 

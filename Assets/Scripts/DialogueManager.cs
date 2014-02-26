@@ -7,8 +7,10 @@ public class DialogueManager : MonoBehaviour {
 	
 	private readonly string GLOBAL_VARIABLE_SAVE_KEY = "serialized_global_variable_state";
 
+	//conditionals for scenes
 	public static bool intro = true;
 	public bool testNoIntro = false;
+	public static bool firstSnow = true;
 	
 	//private string returnedString = string.Empty;
 	
@@ -33,11 +35,18 @@ public class DialogueManager : MonoBehaviour {
 	
 	void Update () {
 		//returnedString = Dialoguer.GetGlobalVariablesState();
-		if (intro) {
+		//cutscenes
+		if (intro && Application.loadedLevelName == "Home") {
 			GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove=false;
 			startDialogue(DialoguerDialogues.Intro); 
 			intro= false;
 		}
+
+		if (firstSnow && Application.loadedLevelName == "Outside") {
+			GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove=false;
+			startDialogue(DialoguerDialogues.Snow); 
+			firstSnow= false;
+			}
 
 		//test for dialoguer variables
 		/*for (int i=0; i<5; i++) {

@@ -7,8 +7,10 @@ public class Inventory : MonoBehaviour {
 	Vector3 shown = new Vector3 (0, 4.1f, 10);
 	RaycastHit hit;
 	public int speed = 3;
-	ArrayList items = new ArrayList();
+	static ArrayList items = new ArrayList();
 	bool noUpdate = false;
+	//arraylist for already picked up items to avoid duplicate items (see Pickable)
+	static ArrayList pickedUp = new ArrayList();
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +55,9 @@ public class Inventory : MonoBehaviour {
 		//item.transform.position= new Vector3( transform.position.x, transform.position.y, -0.5f);
 		item.transform.localScale = item.GetComponent<Pickable>().invScale;
 		//updateItems ();
+
+		Object.DontDestroyOnLoad (item);
+		pickedUp.Add (item.name);
 	}
 
 	public void removeItem(GameObject item){
@@ -75,5 +80,9 @@ public class Inventory : MonoBehaviour {
 
 	public void stopUpdate(bool yes){
 		noUpdate = yes;
+	}
+
+	public bool hasBeenPickedUp(string name){
+		return pickedUp.Contains (name);
 	}
 }

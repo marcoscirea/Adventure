@@ -18,4 +18,10 @@ public enum DialoguerDialogues{
 	Well = 15,
 	PathtoForest = 16,
 	Snowman = 17,
+	Carrot = 18,
+	None = 19,
+	Eyes = 20,
+	Gravel = 21,
+	Sticks = 22,
+	Hat = 23,
 }
