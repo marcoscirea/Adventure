@@ -53,44 +53,31 @@ public class Pickable : Interaction {
 		case "Snowman":
 			switch (gameObject.name){
 			case "Eyes":
-				other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[0];
+				//other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[0];
+				Dialoguer.SetGlobalBoolean(2,true);
 				success = true;
 				break;
 			case "Gravel":
-				if (other.gameObject.GetComponent<SpriteRenderer>().sprite == snowman[0]){
-					other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[1];
-					success = true;
+				Dialoguer.SetGlobalBoolean(1, true);
+				success = true;
 
-					//change mood to peaceful
-					Camera.main.GetComponent<TCPclient>().writeSocket("peaceful");
-				}
-				else{
-					//oh no, it needs eyes before
-					other.gameObject.GetComponent<Dialogue>().startDialogue(4);
-				}
+				//change mood to peaceful
+				Camera.main.GetComponent<TCPclient>().writeSocket("peaceful");
 				break;
 			case "Carrot":
-				if (other.gameObject.GetComponent<SpriteRenderer>().sprite == snowman[1]){
-					other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[2];
-					success = true;
-				}
-				else{
-					//oh no, it needs a mouth before
-					other.gameObject.GetComponent<Dialogue>().startDialogue(5);
-				}
+				//other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[2];
+				Dialoguer.SetGlobalBoolean(3, true);
+				success = true;
 				break;
 			case "Sticks":
-				if (other.gameObject.GetComponent<SpriteRenderer>().sprite == snowman[2]){
-					other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[3];
-					success = true;
-
-					//change mood to happy
-					Camera.main.GetComponent<TCPclient>().writeSocket("happy");
-				}
-				else{
-					//oh no, it needs a nose before
-					other.gameObject.GetComponent<Dialogue>().startDialogue(6);
-				}
+				//other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[3];
+				Dialoguer.SetGlobalBoolean(4, true);
+				success = true;
+				break;
+			case "Hat":
+				//other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[3];
+				Dialoguer.SetGlobalBoolean(0, true);
+				success = true;
 				break;
 			}
 			break;

@@ -16,5 +16,6 @@ public enum DialoguerDialogues{
 	Fireplace = 13,
 	Couch = 14,
 	Well = 15,
-	PathinForest = 16,
+	PathtoForest = 16,
+	Snowman = 17,
 }
