@@ -4,6 +4,7 @@ using System.Collections;
 public class Door : Interaction {
 
 	public string to;
+    public Vector3 exitDoorWalkpoint;
 
 	protected override void doStart ()
 	{
@@ -17,6 +18,7 @@ public class Door : Interaction {
 	public override void action ()
 	{
 		//Application.LoadLevel (to);
+        PointClick.exitThroughDoor(exitDoorWalkpoint);
 		LoadingScreen.Load(to);
 	}
 

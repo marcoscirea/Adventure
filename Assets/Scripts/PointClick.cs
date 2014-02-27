@@ -15,11 +15,20 @@ public class PointClick : MonoBehaviour {
 	bool nowMove = false;
 	bool objectInteraction = false;
 
+    //exit point for next scene
+    static Vector3 exitDoor = Vector3.zero;
+
 	TCPclient client;
 
 	// Use this for initialization
 	void Start () {
 		interactiveobject=null;
+
+        if (exitDoor != Vector3.zero)
+        {
+            transform.position=new Vector3(exitDoor.x, exitDoor.y, -1);
+            exitDoor = Vector3.zero;
+        }
 	}
 	
 	// Update is called once per frame
@@ -145,4 +154,9 @@ public class PointClick : MonoBehaviour {
 	public void usingItem(GameObject item){
 		selectedItem = item;
 	}
+
+    //function to set up when going through a door the exit point in the next scene
+    public static void exitThroughDoor(Vector3 door){
+        exitDoor = door;
+    }
 }
