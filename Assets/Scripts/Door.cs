@@ -16,7 +16,8 @@ public class Door : Interaction {
 
 	public override void action ()
 	{
-		Application.LoadLevel (to);
+		//Application.LoadLevel (to);
+		LoadingScreen.Load(to);
 	}
 
 	public override void secondary ()
