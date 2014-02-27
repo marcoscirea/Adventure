@@ -112,6 +112,7 @@ public class CustomGui : MonoBehaviour {
 			Application.LoadLevel("Narrator");
 				}
 
+		GameObject.Find ("Item Manager").GetComponent<ItemManager> ().activateObjects (message);
 		Camera.main.GetComponent<TCPclient>().writeSocket (message);
 	}
 	#endregion

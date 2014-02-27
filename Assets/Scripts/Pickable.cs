@@ -9,6 +9,7 @@ public class Pickable : Interaction {
 	public bool clicked = false;
 	Inventory inventory;
 	public DialoguerDialogues dialogue;
+	public bool isActive = true;
 
 	protected override void doStart(){
 		if (inventory == null)
@@ -32,9 +33,11 @@ public class Pickable : Interaction {
 	public override void action(){
 
 		if (!inInventory) {
-			inventory.addItem (gameObject);
-			//GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
-			inInventory = true;
+			if (isActive){
+				inventory.addItem (gameObject);
+				//GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
+				inInventory = true;
+			}
 
 			//dialogue when picking up item
 			dm.startDialogue(dialogue);

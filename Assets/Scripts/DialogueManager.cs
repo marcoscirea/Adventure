@@ -14,6 +14,8 @@ public class DialogueManager : MonoBehaviour {
 	public static bool interlude1 = true;
 	public static bool warm =true;
 	public static bool keepCold = true;
+
+	static string dialoguerVariables;
 	
 	//private string returnedString = string.Empty;
 	
@@ -85,5 +87,9 @@ public class DialogueManager : MonoBehaviour {
 		Dialoguer.events.ClearAll();
 		customDialogue.addDialoguerEvents();
 		Dialoguer.StartDialogue(n);	
+	}
+
+	void OnDestroy(){
+		PlayerPrefs.SetString(GLOBAL_VARIABLE_SAVE_KEY,Dialoguer.GetGlobalVariablesState());
 	}
 }

@@ -26,4 +26,5 @@ public enum DialoguerDialogues{
 	Hat = 23,
 	Interlude = 24,
 	KeepCold = 25,
+	Umbrella = 26,
 }

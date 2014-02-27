@@ -95,6 +95,7 @@
      <Compile Include="Assets\DialoguerExamples\Scripts\DialogueriTween.cs" />
      <Compile Include="Assets\DialoguerExamples\Scripts\UnityDefaultGuiManager.cs" />
      <Compile Include="Assets\DialoguerOutput\Enums\DialoguerDialogues.cs" />
+     <Compile Include="Assets\ItemManager.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Depth.cs" />
      <Compile Include="Assets\Scripts\Dialogue.cs" />
