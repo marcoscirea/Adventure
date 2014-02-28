@@ -116,6 +116,11 @@ public class CustomGui : MonoBehaviour {
             LoadingScreen.Load("Narrator");
 		}
 
+        if (message == "ending")
+        {
+            LoadingScreen.Load("Home");
+        }
+
 		GameObject.Find ("Item Manager").GetComponent<ItemManager> ().activateObjects (message);
 		Camera.main.GetComponent<TCPclient>().writeSocket (message);
 	}

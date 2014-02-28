@@ -3852,7 +3852,7 @@ of every color you can imagine</text>
       <name>The snowman speaks</name>
       <startPage>7</startPage>
       <scrollPosition>
-        <x>0</x>
+        <x>1908</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -4086,7 +4086,7 @@ of every color you can imagine</text>
             <y>10</y>
           </position>
           <outs>
-            <int>6</int>
+            <int>10</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -4128,7 +4128,7 @@ in every puddle, lake and sea you see</text>
           <id>6</id>
           <type>EndPhase</type>
           <position>
-            <x>2013</x>
+            <x>2565</x>
             <y>10</y>
           </position>
           <outs />
@@ -4292,6 +4292,92 @@ in every puddle, lake and sea you see</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
         </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>10</id>
+          <type>SendMessagePhase</type>
+          <position>
+            <x>1983.27856</x>
+            <y>10</y>
+          </position>
+          <outs>
+            <int>11</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <messageName>ending</messageName>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>11</id>
+          <type>SetVariablePhase</type>
+          <position>
+            <x>2196.27856</x>
+            <y>10</y>
+          </position>
+          <outs>
+            <int>6</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>8</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>71</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableSetValue>true</variableSetValue>
+          <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
       </phases>
       <floats>
         <variables />
@@ -4309,7 +4395,7 @@ in every puddle, lake and sea you see</text>
     <DialogueEditorDialogueObject>
       <id>12</id>
       <name>Window</name>
-      <startPage>0</startPage>
+      <startPage>2</startPage>
       <scrollPosition>
         <x>0</x>
         <y>0</y>
@@ -4319,8 +4405,8 @@ in every puddle, lake and sea you see</text>
           <id>0</id>
           <type>TextPhase</type>
           <position>
-            <x>167</x>
-            <y>10</y>
+            <x>530</x>
+            <y>210</y>
           </position>
           <outs>
             <int>1</int>
@@ -4364,12 +4450,102 @@ in every puddle, lake and sea you see</text>
           <id>1</id>
           <type>EndPhase</type>
           <position>
-            <x>518</x>
-            <y>30</y>
+            <x>850</x>
+            <y>144</y>
           </position>
           <outs />
           <advanced>false</advanced>
           <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>2</id>
+          <type>ConditionalPhase</type>
+          <position>
+            <x>179</x>
+            <y>10</y>
+          </position>
+          <outs>
+            <int>3</int>
+            <int>0</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>7</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>71</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableSetValue>true</variableSetValue>
+          <variableGetEquation>Equals</variableGetEquation>
+          <variableGetValue>true</variableGetValue>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>3</id>
+          <type>TextPhase</type>
+          <position>
+            <x>520</x>
+            <y>25</y>
+          </position>
+          <outs>
+            <int>1</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text>The sun is so bright today</text>
+          <name />
+          <portrait />
+          <audio />
           <audioDelay>0</audioDelay>
           <rect>
             <x>0</x>
@@ -6935,6 +7111,11 @@ Mr Snowman every day, feeling much better than before.</text>
           <variable>false</variable>
           <id>7</id>
         </DialogueEditorVariableObject>
+        <DialogueEditorVariableObject>
+          <name>ending</name>
+          <variable>false</variable>
+          <id>8</id>
+        </DialogueEditorVariableObject>
       </variables>
       <selection>7</selection>
     </booleans>
@@ -6977,5 +7158,5 @@ Mr Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>26</currentDialogueId>
+  <currentDialogueId>12</currentDialogueId>
 </DialogueEditorMasterObject>
