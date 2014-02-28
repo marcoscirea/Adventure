@@ -3528,7 +3528,7 @@ of every color you can imagine</text>
       <startPage>0</startPage>
       <scrollPosition>
         <x>0</x>
-        <y>0</y>
+        <y>42.46939</y>
       </scrollPosition>
       <phases>
         <DialogueEditorPhaseObject>
@@ -3671,7 +3671,7 @@ of every color you can imagine</text>
             <y>152</y>
           </position>
           <outs>
-            <int>5</int>
+            <int>6</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -3755,8 +3755,8 @@ of every color you can imagine</text>
           <id>5</id>
           <type>EndPhase</type>
           <position>
-            <x>74</x>
-            <y>338</y>
+            <x>711</x>
+            <y>367</y>
           </position>
           <outs />
           <advanced>false</advanced>
@@ -3790,6 +3790,49 @@ of every color you can imagine</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
         </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>6</id>
+          <type>SetVariablePhase</type>
+          <position>
+            <x>254</x>
+            <y>311</y>
+          </position>
+          <outs>
+            <int>5</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>7</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>52</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableSetValue>true</variableSetValue>
+          <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
       </phases>
       <floats>
         <variables />
@@ -3807,7 +3850,7 @@ of every color you can imagine</text>
     <DialogueEditorDialogueObject>
       <id>11</id>
       <name>The snowman speaks</name>
-      <startPage>0</startPage>
+      <startPage>7</startPage>
       <scrollPosition>
         <x>0</x>
         <y>0</y>
@@ -3817,7 +3860,7 @@ of every color you can imagine</text>
           <id>0</id>
           <type>TextPhase</type>
           <position>
-            <x>171</x>
+            <x>170</x>
             <y>10</y>
           </position>
           <outs>
@@ -3907,8 +3950,8 @@ of every color you can imagine</text>
           <id>2</id>
           <type>TextPhase</type>
           <position>
-            <x>10</x>
-            <y>149</y>
+            <x>787</x>
+            <y>10</y>
           </position>
           <outs>
             <int>3</int>
@@ -3952,8 +3995,8 @@ of every color you can imagine</text>
           <id>3</id>
           <type>WaitPhase</type>
           <position>
-            <x>330</x>
-            <y>169</y>
+            <x>1107</x>
+            <y>10</y>
           </position>
           <outs>
             <int>4</int>
@@ -3994,8 +4037,8 @@ of every color you can imagine</text>
           <id>4</id>
           <type>TextPhase</type>
           <position>
-            <x>542</x>
-            <y>148</y>
+            <x>1334</x>
+            <y>10</y>
           </position>
           <outs>
             <int>5</int>
@@ -4039,8 +4082,8 @@ of every color you can imagine</text>
           <id>5</id>
           <type>TextPhase</type>
           <position>
-            <x>10</x>
-            <y>285</y>
+            <x>1663</x>
+            <y>10</y>
           </position>
           <outs>
             <int>6</int>
@@ -4085,8 +4128,137 @@ in every puddle, lake and sea you see</text>
           <id>6</id>
           <type>EndPhase</type>
           <position>
-            <x>387</x>
-            <y>344</y>
+            <x>2013</x>
+            <y>10</y>
+          </position>
+          <outs />
+          <advanced>false</advanced>
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>7</id>
+          <type>ConditionalPhase</type>
+          <position>
+            <x>115</x>
+            <y>155</y>
+          </position>
+          <outs>
+            <int>0</int>
+            <int>8</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>6</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>33</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableSetValue>true</variableSetValue>
+          <variableGetEquation>Equals</variableGetEquation>
+          <variableGetValue>true</variableGetValue>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>8</id>
+          <type>TextPhase</type>
+          <position>
+            <x>449.61322</x>
+            <y>214</y>
+          </position>
+          <outs>
+            <int>9</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text>I should find something to keep him into the shade where it's colder</text>
+          <name />
+          <portrait />
+          <audio />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>9</id>
+          <type>EndPhase</type>
+          <position>
+            <x>775.6132</x>
+            <y>219</y>
           </position>
           <outs />
           <advanced>false</advanced>
@@ -4764,8 +4936,8 @@ in every puddle, lake and sea you see</text>
       <name>Snowman</name>
       <startPage>0</startPage>
       <scrollPosition>
-        <x>1019.28149</x>
-        <y>60</y>
+        <x>0</x>
+        <y>0</y>
       </scrollPosition>
       <phases>
         <DialogueEditorPhaseObject>
@@ -5246,7 +5418,7 @@ Oh, and also some arms!</text>
           <variableId>1</variableId>
           <variableScrollPosition>
             <x>0</x>
-            <y>0</y>
+            <y>14</y>
           </variableScrollPosition>
           <variableSetEquation>Equals</variableSetEquation>
           <variableSetValue>true</variableSetValue>
@@ -6753,8 +6925,18 @@ Mr Snowman every day, feeling much better than before.</text>
           <variable>false</variable>
           <id>5</id>
         </DialogueEditorVariableObject>
+        <DialogueEditorVariableObject>
+          <name>umbrella</name>
+          <variable>false</variable>
+          <id>6</id>
+        </DialogueEditorVariableObject>
+        <DialogueEditorVariableObject>
+          <name>warm</name>
+          <variable>false</variable>
+          <id>7</id>
+        </DialogueEditorVariableObject>
       </variables>
-      <selection>5</selection>
+      <selection>7</selection>
     </booleans>
     <floats>
       <variables>
@@ -6793,7 +6975,7 @@ Mr Snowman every day, feeling much better than before.</text>
   </themes>
   <selectorScrollPosition>
     <x>0</x>
-    <y>145</y>
+    <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>11</currentDialogueId>
+  <currentDialogueId>26</currentDialogueId>
 </DialogueEditorMasterObject>

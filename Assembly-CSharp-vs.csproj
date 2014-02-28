@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\LockRotation.cs" />
      <Compile Include="Assets\Scripts\Pickable.cs" />
      <Compile Include="Assets\Scripts\PointClick.cs" />
+     <Compile Include="Assets\Scripts\SnowmanChangeDialogue.cs" />
      <Compile Include="Assets\Scripts\TCPclient.cs" />
      <None Include="Assets\DialoguerOutput\Resources\dialoguer_data.xml" />
      <None Include="Assets\DialoguerExamples\README.txt" />

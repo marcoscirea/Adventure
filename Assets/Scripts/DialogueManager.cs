@@ -16,9 +16,19 @@ public class DialogueManager : MonoBehaviour {
 	public static bool keepCold = true;
 
 	static string dialoguerVariables;
+
+    static bool firstBoot = true;
 	
 	//private string returnedString = string.Empty;
 	
+    void Awake(){
+        if (firstBoot)
+        {
+            PlayerPrefs.DeleteKey(GLOBAL_VARIABLE_SAVE_KEY);
+            firstBoot=false;
+        }
+    }
+
 	void Start () {
 
 		customDialogue = GameObject.FindGameObjectWithTag ("Gui").GetComponent<CustomGui> ();
@@ -74,7 +84,7 @@ public class DialogueManager : MonoBehaviour {
 		//test for dialoguer variables
 		/*for (int i=0; i<5; i++) {
 			Debug.Log("variable "+i+ " " + Dialoguer.GetGlobalBoolean(i));
-			}*/
+			} */
 	}
 
 	public void startDialogue(int n){

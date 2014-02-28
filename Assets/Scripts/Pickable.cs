@@ -84,10 +84,12 @@ public class Pickable : Interaction
                     case "Eyes":
                 //other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[0];
                         Dialoguer.SetGlobalBoolean(2, true);
+                        other.gameObject.transform.FindChild("Snow_eyes").gameObject.SetActive(true);
                         success = true;
                         break;
                     case "Gravel":
                         Dialoguer.SetGlobalBoolean(1, true);
+                        other.gameObject.transform.FindChild("Snow_mouth").gameObject.SetActive(true);
                         success = true;
 
                 //change mood to peaceful
@@ -96,22 +98,29 @@ public class Pickable : Interaction
                     case "Carrot":
                 //other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[2];
                         Dialoguer.SetGlobalBoolean(3, true);
+                        other.gameObject.transform.FindChild("Snow_nose").gameObject.SetActive(true);
                         success = true;
                         break;
                     case "Sticks":
                 //other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[3];
                         Dialoguer.SetGlobalBoolean(4, true);
+                        other.gameObject.transform.FindChild("Snow_branches").gameObject.SetActive(true);
                         success = true;
                         break;
                     case "Hat":
                 //other.gameObject.GetComponent<SpriteRenderer>().sprite = snowman[3];
                         Dialoguer.SetGlobalBoolean(0, true);
+                        other.gameObject.transform.FindChild("Snow_hat").gameObject.SetActive(true);
+                        other.gameObject.transform.FindChild("Snow_butterfly").gameObject.SetActive(true);
                         success = true;
                         break;
 
                 //umbrella 
                     case "Umbrella":
+                        //dm.startDialogue(DialoguerDialogues.Thesnowmanspeaks);
+                        Dialoguer.SetGlobalBoolean(6, true);
                         dm.startDialogue(DialoguerDialogues.Thesnowmanspeaks);
+                        success = true;
                         break;
                 }
                 break;
