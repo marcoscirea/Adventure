@@ -8,6 +8,17 @@ public class SnowmanChangeDialogue : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         d = GetComponent<Dialogue>();
+
+        //activate sprites if the snowman is already been completed
+        if (Dialoguer.GetGlobalBoolean(5))
+        {
+            transform.FindChild("Snow_branches").gameObject.SetActive(true);
+            transform.FindChild("Snow_butterfly").gameObject.SetActive(true);
+            transform.FindChild("Snow_eyes").gameObject.SetActive(true);
+            transform.FindChild("Snow_hat").gameObject.SetActive(true);
+            transform.FindChild("Snow_mouth").gameObject.SetActive(true);
+            transform.FindChild("Snow_nose").gameObject.SetActive(true);
+        }
 	}
 	
 	// Update is called once per frame

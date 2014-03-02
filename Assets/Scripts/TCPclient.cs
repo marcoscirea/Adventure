@@ -7,7 +7,7 @@ using System.Net.Sockets;
 public class TCPclient : MonoBehaviour
 {
 
-    public static string startingMood = "bored";
+    public static string startingMood = "miserable";
     internal Boolean socketReady = false;
     TcpClient mySocket;
     NetworkStream theStream;

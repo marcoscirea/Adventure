@@ -16,6 +16,11 @@ public class DialogueManager : MonoBehaviour
     public static bool keepCold = true;
     static string dialoguerVariables;
     static bool firstBoot = true;
+    static bool snowmanTalks = true;
+    static bool doEnding=true;
+    static bool goodEnding = false;
+
+    static bool snowmanComplete = false;
 
     public Texture ending;
     
@@ -71,6 +76,19 @@ public class DialogueManager : MonoBehaviour
             firstSnow = false;
         }
 
+        if (!snowmanComplete && Application.loadedLevelName == "Outside" &&
+            Dialoguer.GetGlobalBoolean(0) &&
+            Dialoguer.GetGlobalBoolean(1) &&
+            Dialoguer.GetGlobalBoolean(2) &&
+            Dialoguer.GetGlobalBoolean(3) &&
+            Dialoguer.GetGlobalBoolean(4))
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
+            startDialogue(DialoguerDialogues.Snowman);
+
+            snowmanComplete=true;
+        }
+
         if (interlude1 && Application.loadedLevelName == "Narrator")
         {
             startDialogue(DialoguerDialogues.Interlude); 
@@ -92,13 +110,28 @@ public class DialogueManager : MonoBehaviour
             keepCold = false;
         }
 
-        if (Dialoguer.GetGlobalBoolean(8) && Application.loadedLevelName == "Home")
+        if (snowmanTalks && Dialoguer.GetGlobalBoolean(6) && Application.loadedLevelName == "Outside")
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
+            startDialogue(DialoguerDialogues.Thesnowmanspeaks);
+            snowmanTalks = false;
+        }
+
+        if (doEnding && Dialoguer.GetGlobalBoolean(8) && Application.loadedLevelName == "Home")
         {
             //the end!
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
             gameObject.AddComponent<GUITexture>();
             guiTexture.texture = ending;
             transform.position = new Vector3(0.5f, 0.5f, 0.0f);
+
+            //ending music mood
+            if (goodEnding)
+                Camera.main.GetComponent<TCPclient>().writeSocket("happy");
+            else
+                Camera.main.GetComponent<TCPclient>().writeSocket("miserable");
+
+            doEnding=false;
         }
 
         //test for dialoguer variables

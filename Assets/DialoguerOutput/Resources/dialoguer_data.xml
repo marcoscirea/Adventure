@@ -3372,7 +3372,7 @@ of every color you can imagine</text>
     <DialogueEditorDialogueObject>
       <id>9</id>
       <name>Snow!</name>
-      <startPage>1</startPage>
+      <startPage>3</startPage>
       <scrollPosition>
         <x>0</x>
         <y>0</y>
@@ -3508,6 +3508,49 @@ of every color you can imagine</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
         </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>3</id>
+          <type>SendMessagePhase</type>
+          <position>
+            <x>53</x>
+            <y>169</y>
+          </position>
+          <outs>
+            <int>1</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <messageName>peaceful</messageName>
+        </DialogueEditorPhaseObject>
       </phases>
       <floats>
         <variables />
@@ -3626,7 +3669,7 @@ of every color you can imagine</text>
           <type>WaitPhase</type>
           <position>
             <x>10</x>
-            <y>169</y>
+            <y>158</y>
           </position>
           <outs>
             <int>4</int>
@@ -3712,8 +3755,8 @@ of every color you can imagine</text>
           <id>4</id>
           <type>SendMessagePhase</type>
           <position>
-            <x>230</x>
-            <y>148</y>
+            <x>249</x>
+            <y>155</y>
           </position>
           <outs>
             <int>3</int>
@@ -3852,7 +3895,7 @@ of every color you can imagine</text>
       <name>The snowman speaks</name>
       <startPage>7</startPage>
       <scrollPosition>
-        <x>1908</x>
+        <x>765.2098</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -3954,7 +3997,7 @@ of every color you can imagine</text>
             <y>10</y>
           </position>
           <outs>
-            <int>3</int>
+            <int>12</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -4377,6 +4420,49 @@ in every puddle, lake and sea you see</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableSetValue>true</variableSetValue>
           <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>12</id>
+          <type>SendMessagePhase</type>
+          <position>
+            <x>1091.20972</x>
+            <y>190</y>
+          </position>
+          <outs>
+            <int>3</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <messageName>peaceful</messageName>
         </DialogueEditorPhaseObject>
       </phases>
       <floats>
@@ -5112,7 +5198,7 @@ in every puddle, lake and sea you see</text>
       <name>Snowman</name>
       <startPage>0</startPage>
       <scrollPosition>
-        <x>0</x>
+        <x>2397.28223</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -5521,8 +5607,8 @@ Oh, and also some arms!</text>
           <id>9</id>
           <type>EndPhase</type>
           <position>
-            <x>3046.98926</x>
-            <y>187</y>
+            <x>3240.98926</x>
+            <y>132</y>
           </position>
           <outs />
           <advanced>false</advanced>
@@ -5832,7 +5918,7 @@ Oh, and also some arms!</text>
             <y>133</y>
           </position>
           <outs>
-            <int>9</int>
+            <int>17</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -5866,6 +5952,49 @@ Oh, and also some arms!</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
           <messageName>snowmanComplete</messageName>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>17</id>
+          <type>SendMessagePhase</type>
+          <position>
+            <x>3022.28223</x>
+            <y>128</y>
+          </position>
+          <outs>
+            <int>9</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <messageName>happy</messageName>
         </DialogueEditorPhaseObject>
       </phases>
       <floats>
@@ -6540,7 +6669,7 @@ Oh, and also some arms!</text>
             <y>12</y>
           </position>
           <outs>
-            <int>2</int>
+            <int>4</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -6703,6 +6832,49 @@ Mr Snowman every day, feeling much better than before.</text>
           </variableScrollPosition>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>4</id>
+          <type>SendMessagePhase</type>
+          <position>
+            <x>489</x>
+            <y>10</y>
+          </position>
+          <outs>
+            <int>2</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <messageName>fearful</messageName>
         </DialogueEditorPhaseObject>
       </phases>
       <floats>
@@ -7310,5 +7482,5 @@ Mr Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>27</currentDialogueId>
+  <currentDialogueId>10</currentDialogueId>
 </DialogueEditorMasterObject>
