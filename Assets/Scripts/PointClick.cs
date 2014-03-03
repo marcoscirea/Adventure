@@ -99,14 +99,12 @@ public class PointClick : MonoBehaviour {
 
 		if(move){
 			
-			transform.LookAt(target);
-			
-			//Ray diff = new Ray(transform.position, target);
-			
-			//Debug.Log(diff.direction);
-			
+            //old way
+			/*transform.LookAt(target);
 			transform.Translate(Vector3.forward *  Time.deltaTime * speed);
-			
+			*/
+
+            transform.position = Vector3.MoveTowards(transform.position, target, 0.009f);
 			
 			
 			if(Vector3.Distance(transform.position, target) < 0.01){
