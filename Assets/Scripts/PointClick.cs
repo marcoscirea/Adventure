@@ -20,8 +20,13 @@ public class PointClick : MonoBehaviour {
 
 	TCPclient client;
 
+    private Animator animator;
+
 	// Use this for initialization
 	void Start () {
+
+        animator = GetComponent<Animator>();
+
 		interactiveobject=null;
 
         if (exitDoor != Vector3.zero)
@@ -104,7 +109,7 @@ public class PointClick : MonoBehaviour {
 			transform.Translate(Vector3.forward *  Time.deltaTime * speed);
 			*/
 
-            transform.position = Vector3.MoveTowards(transform.position, target, 0.009f);
+            transform.position = Vector3.MoveTowards(transform.position, target, speed);
 			
 			
 			if(Vector3.Distance(transform.position, target) < 0.01){
@@ -123,14 +128,25 @@ public class PointClick : MonoBehaviour {
 						activate();
 						selectedItem=null;
 						objectInteraction=false;
-					}
+                    }
+
 				}
 				
-			}
-			
-			
-			
+			}	
 		}
+
+        //ANIMATOR CODE
+        if (move)
+        {
+            if (target.x >transform.position.x)
+                animator.SetBool("isMovingLeft", false);
+            else
+                animator.SetBool("isMovingLeft", true);
+                
+            animator.SetBool("isMoving", true);
+        }
+        else
+            animator.SetBool("isMoving", false);
 	}
 
 	void LateUpdate(){
@@ -157,4 +173,5 @@ public class PointClick : MonoBehaviour {
     public static void exitThroughDoor(Vector3 door){
         exitDoor = door;
     }
+
 }

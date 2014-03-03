@@ -67,7 +67,7 @@ public class CustomGui : MonoBehaviour {
 	private void onDialogueEndedHandler(){
 		_dialogue = false;
 		_showWindow = false;
-		GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
+		GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().activate();
 
 		//Load new scene when Narrator level is active
 		if (Application.loadedLevelName == "Narrator")
