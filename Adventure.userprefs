@@ -1,13 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PointClick.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DialogueManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\PointClick.cs" Line="112" Column="87" />
-      <File FileName="Assets\Scripts\DialogueManager.cs" Line="1" Column="1" />
       <File FileName="Assets\CustomGui\Scripts\CustomGui.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SnowmanChangeDialogue.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Pickable.cs" Line="49" Column="106" />
-      <File FileName="Assets\Scripts\LockRotation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\DialogueManager.cs" Line="21" Column="7" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

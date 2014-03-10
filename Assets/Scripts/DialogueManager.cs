@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     static bool firstBoot = true;
     static bool snowmanTalks = true;
     static bool doEnding=true;
-    static bool goodEnding = false;
+    //static bool goodEnding = false;
 
     static bool snowmanComplete = false;
 
@@ -126,10 +126,12 @@ public class DialogueManager : MonoBehaviour
             transform.position = new Vector3(0.5f, 0.5f, 0.0f);
 
             //ending music mood
-            if (goodEnding)
+            if (Dialoguer.GetGlobalFloat(1) == 0)
                 Camera.main.GetComponent<TCPclient>().writeSocket("happy");
-            else
-                Camera.main.GetComponent<TCPclient>().writeSocket("miserable");
+            else {
+                if (Dialoguer.GetGlobalFloat(1) == 1)
+                    Camera.main.GetComponent<TCPclient>().writeSocket("miserable");
+            }
 
             doEnding=false;
         }

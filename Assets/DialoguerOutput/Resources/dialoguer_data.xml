@@ -2910,8 +2910,8 @@ the Dialoguer system!</text>
       <name>Intro</name>
       <startPage>0</startPage>
       <scrollPosition>
-        <x>280.913574</x>
-        <y>240</y>
+        <x>0</x>
+        <y>180</y>
       </scrollPosition>
       <phases>
         <DialogueEditorPhaseObject>
@@ -3104,7 +3104,7 @@ of every color you can imagine</text>
             <y>146</y>
           </position>
           <outs>
-            <int>9</int>
+            <int>10</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -3145,8 +3145,8 @@ of every color you can imagine</text>
           <id>5</id>
           <type>WaitPhase</type>
           <position>
-            <x>368</x>
-            <y>320</y>
+            <x>66</x>
+            <y>1257</y>
           </position>
           <outs>
             <int>6</int>
@@ -3187,8 +3187,8 @@ of every color you can imagine</text>
           <id>6</id>
           <type>TextPhase</type>
           <position>
-            <x>619</x>
-            <y>286</y>
+            <x>374</x>
+            <y>1236</y>
           </position>
           <outs>
             <int>7</int>
@@ -3232,8 +3232,8 @@ of every color you can imagine</text>
           <id>7</id>
           <type>TextPhase</type>
           <position>
-            <x>10</x>
-            <y>431</y>
+            <x>740</x>
+            <y>1240</y>
           </position>
           <outs>
             <int>8</int>
@@ -3277,8 +3277,8 @@ of every color you can imagine</text>
           <id>8</id>
           <type>EndPhase</type>
           <position>
-            <x>420</x>
-            <y>468</y>
+            <x>1089</x>
+            <y>1296</y>
           </position>
           <outs />
           <advanced>false</advanced>
@@ -3316,8 +3316,8 @@ of every color you can imagine</text>
           <id>9</id>
           <type>SendMessagePhase</type>
           <position>
-            <x>35</x>
-            <y>290</y>
+            <x>761</x>
+            <y>307</y>
           </position>
           <outs>
             <int>5</int>
@@ -3354,6 +3354,137 @@ of every color you can imagine</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
           <messageName>content</messageName>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>10</id>
+          <type>ConditionalPhase</type>
+          <position>
+            <x>27</x>
+            <y>285</y>
+          </position>
+          <outs>
+            <int>9</int>
+            <int>12</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Float</variableType>
+          <variableId>1</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <variableGetValue>0</variableGetValue>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>11</id>
+          <type>SendMessagePhase</type>
+          <position>
+            <x>763</x>
+            <y>600</y>
+          </position>
+          <outs>
+            <int>5</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Boolean</variableType>
+          <variableId>0</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <messageName>alarmed</messageName>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>12</id>
+          <type>ConditionalPhase</type>
+          <position>
+            <x>374</x>
+            <y>508</y>
+          </position>
+          <outs>
+            <int>11</int>
+            <int>5</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Float</variableType>
+          <variableId>1</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <variableGetValue>1</variableGetValue>
         </DialogueEditorPhaseObject>
       </phases>
       <floats>
@@ -3870,7 +4001,7 @@ of every color you can imagine</text>
           <variableId>7</variableId>
           <variableScrollPosition>
             <x>0</x>
-            <y>52</y>
+            <y>0</y>
           </variableScrollPosition>
           <variableSetEquation>Equals</variableSetEquation>
           <variableSetValue>true</variableSetValue>
@@ -3895,7 +4026,7 @@ of every color you can imagine</text>
       <name>The snowman speaks</name>
       <startPage>7</startPage>
       <scrollPosition>
-        <x>765.2098</x>
+        <x>1952.88293</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -5198,8 +5329,8 @@ in every puddle, lake and sea you see</text>
       <name>Snowman</name>
       <startPage>0</startPage>
       <scrollPosition>
-        <x>2397.28223</x>
-        <y>0</y>
+        <x>1490.85974</x>
+        <y>60</y>
       </scrollPosition>
       <phases>
         <DialogueEditorPhaseObject>
@@ -5607,8 +5738,8 @@ Oh, and also some arms!</text>
           <id>9</id>
           <type>EndPhase</type>
           <position>
-            <x>3240.98926</x>
-            <y>132</y>
+            <x>3675.98926</x>
+            <y>245</y>
           </position>
           <outs />
           <advanced>false</advanced>
@@ -5918,7 +6049,7 @@ Oh, and also some arms!</text>
             <y>133</y>
           </position>
           <outs>
-            <int>17</int>
+            <int>18</int>
           </outs>
           <advanced>false</advanced>
           <metadata />
@@ -5957,8 +6088,8 @@ Oh, and also some arms!</text>
           <id>17</id>
           <type>SendMessagePhase</type>
           <position>
-            <x>3022.28223</x>
-            <y>128</y>
+            <x>3382.28223</x>
+            <y>71</y>
           </position>
           <outs>
             <int>9</int>
@@ -5995,6 +6126,50 @@ Oh, and also some arms!</text>
           <variableSetEquation>Equals</variableSetEquation>
           <variableGetEquation>Equals</variableGetEquation>
           <messageName>happy</messageName>
+        </DialogueEditorPhaseObject>
+        <DialogueEditorPhaseObject>
+          <id>18</id>
+          <type>ConditionalPhase</type>
+          <position>
+            <x>3033.98926</x>
+            <y>70</y>
+          </position>
+          <outs>
+            <int>17</int>
+            <int>9</int>
+          </outs>
+          <advanced>false</advanced>
+          <metadata />
+          <text />
+          <audioDelay>0</audioDelay>
+          <rect>
+            <x>0</x>
+            <y>0</y>
+            <center>
+              <x>0</x>
+              <y>0</y>
+            </center>
+            <width>0</width>
+            <height>0</height>
+            <xMin>0</xMin>
+            <yMin>0</yMin>
+            <xMax>0</xMax>
+            <yMax>0</yMax>
+          </rect>
+          <newWindow>false</newWindow>
+          <choices />
+          <waitType>Seconds</waitType>
+          <waitDuration>0</waitDuration>
+          <variableScope>Global</variableScope>
+          <variableType>Float</variableType>
+          <variableId>1</variableId>
+          <variableScrollPosition>
+            <x>0</x>
+            <y>0</y>
+          </variableScrollPosition>
+          <variableSetEquation>Equals</variableSetEquation>
+          <variableGetEquation>Equals</variableGetEquation>
+          <variableGetValue>0</variableGetValue>
         </DialogueEditorPhaseObject>
       </phases>
       <floats>
@@ -7441,7 +7616,7 @@ Mr Snowman every day, feeling much better than before.</text>
           <id>8</id>
         </DialogueEditorVariableObject>
       </variables>
-      <selection>7</selection>
+      <selection>0</selection>
     </booleans>
     <floats>
       <variables>
@@ -7450,8 +7625,13 @@ Mr Snowman every day, feeling much better than before.</text>
           <variable>0</variable>
           <id>0</id>
         </DialogueEditorVariableObject>
+        <DialogueEditorVariableObject>
+          <name>Group</name>
+          <variable>1</variable>
+          <id>1</id>
+        </DialogueEditorVariableObject>
       </variables>
-      <selection>0</selection>
+      <selection>1</selection>
     </floats>
     <strings>
       <variables />
@@ -7482,5 +7662,5 @@ Mr Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>10</currentDialogueId>
+  <currentDialogueId>11</currentDialogueId>
 </DialogueEditorMasterObject>
