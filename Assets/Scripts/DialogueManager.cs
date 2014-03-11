@@ -18,7 +18,9 @@ public class DialogueManager : MonoBehaviour
     static bool firstBoot = true;
     static bool snowmanTalks = true;
     static bool doEnding=true;
-    //static bool goodEnding = false;
+
+    //eperiment groups: 0-true foreshadowing; 1-false foreshadowi ; 2-ngcontrol group
+    public int group=0; 
 
     static bool snowmanComplete = false;
 
@@ -31,7 +33,7 @@ public class DialogueManager : MonoBehaviour
         if (firstBoot)
         {
             PlayerPrefs.DeleteKey(GLOBAL_VARIABLE_SAVE_KEY);
-            firstBoot = false;
+            //firstBoot = false;
         }
     }
 
@@ -136,12 +138,24 @@ public class DialogueManager : MonoBehaviour
             doEnding=false;
         }
 
+
         //test for dialoguer variables
         /*for (int i=0; i<5; i++) {
             Debug.Log("variable "+i+ " " + Dialoguer.GetGlobalBoolean(i));
             } */
     }
 
+    void LateUpdate(){
+        if (firstBoot)
+        {
+            Dialoguer.SetGlobalFloat(1, group);
+
+            if (group==2)
+                Camera.main.GetComponent<TCPclient>().writeSocket ("content");
+            firstBoot=false;
+        }
+    }
+    
     public void startDialogue(int n)
     {
         Dialoguer.events.ClearAll();

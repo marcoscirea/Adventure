@@ -30,6 +30,8 @@ public class CustomGui : MonoBehaviour {
 	
 	private string _text;
 	private string[] _choices;
+
+    private string _theme;
 	
 	// Use this for initialization
 	void Start () {
@@ -100,6 +102,8 @@ public class CustomGui : MonoBehaviour {
 		
 		_text = data.text;
 		if(data.name != null && data.name != string.Empty) _text = data.name + ": "+_text;
+
+        _theme = data.theme;
 		
 		_showWindow = true;
 	}
@@ -155,7 +159,10 @@ public class CustomGui : MonoBehaviour {
 	}
 	
 	private void drawText(string text, Rect rect, GUIStyle style){
-		GUI.color = Color.black;
+        if (_theme == "snowman")
+		    GUI.color = Color.blue;
+        else
+            GUI.color = Color.black;
 		for(int x=0; x<TEXT_OUTLINE_WIDTH; x+=1){
 			for(int y=0; y<TEXT_OUTLINE_WIDTH; y+=1){
 				GUI.Label(new Rect(rect.x + (x+1), rect.y + (y+1), rect.width, rect.height), text, style);
