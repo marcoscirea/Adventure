@@ -17,6 +17,9 @@ public class Dialogue : Interaction {
 	public override void action(){
 		//dm.startDialogue(dialogueNum);
 		dm.startDialogue (dialogue);
+
+        //log start dialogue
+        Logger.interact(gameObject.name);
 	}
 
 	public override void secondary(){

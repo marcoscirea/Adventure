@@ -47,6 +47,9 @@ public class Pickable : Interaction
 
                 //Picking up animation
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("Pickup");
+
+                //log picking up action
+                Logger.pickedUp(gameObject.name);
             }
 
             //dialogue when picking up item
@@ -74,6 +77,10 @@ public class Pickable : Interaction
 
     public void useWith(GameObject other)
     {
+
+        //log trying to use an the item on something
+        Logger.use(gameObject.name, other.name);
+
         bool success = false;
         //interact with object
         //Debug.Log("Interact!");

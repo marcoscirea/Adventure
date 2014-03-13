@@ -17,6 +17,9 @@ public class Door : Interaction {
 
 	public override void action ()
 	{
+        //log changing room
+        Logger.goTo(to);
+
 		//Application.LoadLevel (to);
         PointClick.exitThroughDoor(exitDoorWalkpoint);
 		LoadingScreen.Load(to);

@@ -76,6 +76,9 @@ public class DialogueManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
             startDialogue(DialoguerDialogues.Snow); 
             firstSnow = false;
+
+            //log
+            Logger.key("First time outside");
         }
 
         if (!snowmanComplete && Application.loadedLevelName == "Outside" &&
@@ -89,6 +92,9 @@ public class DialogueManager : MonoBehaviour
             startDialogue(DialoguerDialogues.Snowman);
 
             snowmanComplete=true;
+
+            //log
+            Logger.key("Snowman Complete");
         }
 
         if (interlude1 && Application.loadedLevelName == "Narrator")
@@ -96,6 +102,9 @@ public class DialogueManager : MonoBehaviour
             startDialogue(DialoguerDialogues.Interlude); 
             interlude1 = false;
 
+
+            //log
+            Logger.key("Narrator dialogue");
         }
 
         if (warm && !interlude1 && Application.loadedLevelName == "Home")
@@ -103,6 +112,9 @@ public class DialogueManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
             startDialogue(DialoguerDialogues.Warm);
             warm = false;
+
+            //log
+            Logger.key("Warm");
         }
 
         if (keepCold && !warm && Application.loadedLevelName == "Outside")
@@ -110,6 +122,9 @@ public class DialogueManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
             startDialogue(DialoguerDialogues.KeepCold);
             keepCold = false;
+
+            //log
+            Logger.key("Back Outside");
         }
 
         if (snowmanTalks && Dialoguer.GetGlobalBoolean(6) && Application.loadedLevelName == "Outside")
@@ -117,6 +132,9 @@ public class DialogueManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
             startDialogue(DialoguerDialogues.Thesnowmanspeaks);
             snowmanTalks = false;
+
+            //log
+            Logger.key("Last Dialogue");
         }
 
         if (doEnding && Dialoguer.GetGlobalBoolean(8) && Application.loadedLevelName == "Home")
@@ -136,8 +154,16 @@ public class DialogueManager : MonoBehaviour
             }
 
             doEnding=false;
+
+            //log
+            Logger.key("Ending");
         }
 
+        if (!doEnding)
+        {
+            if (Input.anyKey)
+                Application.Quit();
+        }
 
         //test for dialoguer variables
         /*for (int i=0; i<5; i++) {
@@ -165,6 +191,9 @@ public class DialogueManager : MonoBehaviour
 
     public void startDialogue(DialoguerDialogues n)
     {
+        //log start of dialogue
+        Logger.startDialogue(n.ToString());
+
         Dialoguer.events.ClearAll();
         customDialogue.addDialoguerEvents();
         Dialoguer.StartDialogue(n); 

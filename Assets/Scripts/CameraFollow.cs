@@ -10,6 +10,18 @@ public class CameraFollow : MonoBehaviour {
 	public Vector3 target;
 	public bool move = false;
 
+    void Awake(){
+        //check if you can see outside on the left
+        while (!Physics.Raycast(new Ray(camera.ViewportToWorldPoint(new Vector3(0, 0.5f, camera.nearClipPlane)) - new Vector3(0.001f,0,0), transform.forward)))
+        {
+            transform.position = transform.position +Vector3.right * 0.1f;
+        }
+        //check if you can see outside on the right
+        while (!Physics.Raycast(new Ray(camera.ViewportToWorldPoint(new Vector3(1, 0.5f, camera.nearClipPlane)) + new Vector3(0.001f,0,0), transform.forward)))
+        {
+            transform.position = transform.position -Vector3.right * 0.1f;
+        }
+    }
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindGameObjectWithTag("Player");

@@ -64,6 +64,7 @@ public class CustomGui : MonoBehaviour {
 	
 	private void onDialogueStartedHandler(){
 		_dialogue = true;
+
 	}
 	
 	private void onDialogueEndedHandler(){
@@ -77,6 +78,9 @@ public class CustomGui : MonoBehaviour {
             //Application.LoadLevel("Home");
             LoadingScreen.Load("Home");
         }
+
+        //log that the dialogue ended
+        Logger.endDialogue();
 	}
 	
 	private void onDialogueInstantlyEndedHandler(){

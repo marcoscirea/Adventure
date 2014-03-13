@@ -1,0 +1,42 @@
+KEYPOINTS
+First time outside, 28.88541
+Snowman Complete, 77.0735
+Narrator dialogue, 78.63164
+Warm, 81.64952
+Back Outside, 106.8085
+Last Dialogue, 132.9832
+Ending, 140.2001
+Game closed, 150.1416
+
+PICKED ITEMS
+Eyes, 9.059793
+Hat, 17.06828
+Carrot, 37.88355
+Sticks, 48.15879
+Gravel, 52.80611
+Umbrella, 94.54562
+
+USED ITEMS
+Carrot, Snowman, 61.84134
+Gravel, Snowman, 70.63786
+Sticks, Snowman, 72.48272
+Eyes, Snowman, 74.5581
+Hat, Snowman, 77.0454
+Umbrella, Snowman, 132.9509
+
+INTERACTIONS
+Window, 23.76613
+Snowman, 59.01792
+Snowman, 62.51414
+Snowman, 63.76584
+Snowman, 64.38709
+Snowman, 64.77527
+Snowman, 65.03128
+Snowman, 66.24941
+Snowman, 67.72626
+Window, 101.7133
+Snowman, 130.1326
+
+CHANGED ROOM
+Outside, 28.86277
+Outside, 106.7868

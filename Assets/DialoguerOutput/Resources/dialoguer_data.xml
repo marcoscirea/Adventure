@@ -4115,7 +4115,7 @@ of every color you can imagine</text>
       <name>The snowman speaks</name>
       <startPage>7</startPage>
       <scrollPosition>
-        <x>803.254</x>
+        <x>1620.27808</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -4345,6 +4345,7 @@ of every color you can imagine</text>
         <DialogueEditorPhaseObject>
           <id>5</id>
           <type>TextPhase</type>
+          <theme>snowman</theme>
           <position>
             <x>1663</x>
             <y>10</y>
@@ -4352,7 +4353,7 @@ of every color you can imagine</text>
           <outs>
             <int>10</int>
           </outs>
-          <advanced>false</advanced>
+          <advanced>true</advanced>
           <metadata />
           <text>I'll become water and if you ever need me I'll be
 in every puddle, lake and sea you see</text>
@@ -7840,5 +7841,5 @@ Mr Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>8</currentDialogueId>
+  <currentDialogueId>11</currentDialogueId>
 </DialogueEditorMasterObject>
