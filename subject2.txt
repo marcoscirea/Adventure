@@ -2,11 +2,14 @@ GROUP 0
 0 = true foreshadowing, 1 = false foreshadowing, 3 = control group
 
 KEYPOINTS
-Game closed, 2.675003
+Game closed, 10.30324
 
 DIALOGUES LENGHTS
+Intro, 5.997459
+Eyes, 0.381031
 
 PICKED ITEMS
+Eyes, 8.18426
 
 USED ITEMS
 

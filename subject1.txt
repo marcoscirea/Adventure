@@ -2,21 +2,83 @@ GROUP 0
 0 = true foreshadowing, 1 = false foreshadowing, 3 = control group
 
 KEYPOINTS
-First time outside, 12.47399
-Game closed, 14.92747
+First time outside, 22.7845
+Snowman Complete, 59.7655
+Narrator dialogue, 61.48505
+Warm, 65.11858
+Back Outside, 77.81181
+Last Dialogue, 95.25662
+Ending, 103.4757
+Game closed, 111.8974
 
 DIALOGUES LENGHTS
-Intro, 7.200385
-Eyes, 0.707386
-Snow, 1.028747
-Snow, 1.028747
+Intro, 6.287789
+Window, 0.4970031
+Hat, 0.9774342
+Eyes, 0.5867519
+Snow, 1.44376
+Snow, 1.44376
+Carrot, 0.5473251
+Carrot, 0.5473251
+Gravel, 0.8448982
+Gravel, 0.8448982
+Sticks, 0.598114
+Sticks, 0.598114
+Snowman, 0.7470856
+Snowman, 0.7470856
+Snowman, 0.5135612
+Snowman, 0.5135612
+Snowman, 1.386215
+Snowman, 1.386215
+Interlude, 3.61697
+Interlude, 3.61697
+Interlude, 3.61697
+Warm, 4.23156
+Warm, 4.23156
+Warm, 4.23156
+Warm, 4.23156
+Umbrella, 0.5135651
+Umbrella, 0.5135651
+Umbrella, 0.5135651
+Umbrella, 0.5135651
+KeepCold, 1.294991
+KeepCold, 1.294991
+KeepCold, 1.294991
+KeepCold, 1.294991
+KeepCold, 1.294991
+Thesnowmanspeaks, 0.8117599
+Thesnowmanspeaks, 0.8117599
+Thesnowmanspeaks, 0.8117599
+Thesnowmanspeaks, 0.8117599
+Thesnowmanspeaks, 0.8117599
+Thesnowmanspeaks, 7.885719
+Thesnowmanspeaks, 7.885719
+Thesnowmanspeaks, 7.885719
+Thesnowmanspeaks, 7.885719
+Thesnowmanspeaks, 7.885719
 
 PICKED ITEMS
-Eyes, 9.513535
+Hat, 13.31697
+Eyes, 19.79255
+Carrot, 29.84735
+Gravel, 37.34527
+Sticks, 42.24627
+Umbrella, 74.73041
 
 USED ITEMS
+Hat, Snowman, 50.27044
+Eyes, Snowman, 54.60594
+Carrot, Snowman, 56.35546
+Gravel, Snowman, 57.97865
+Sticks, Snowman, 59.74892
+Umbrella, Snowman, 95.24006
 
 INTERACTIONS
+Window, 7.712606
+Snowman, 45.80698
+Snowman, 52.38634
+Snowman, 91.07822
 
 CHANGED ROOM
-Outside, 12.45742
+Outside, 22.76793
+Outside, 77.79524

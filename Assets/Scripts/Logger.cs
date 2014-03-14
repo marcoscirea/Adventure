@@ -281,7 +281,11 @@ public class Logger : MonoBehaviour {
     }
 
     static public void endDialogue(){
-        string[] s = {dialogueName, (Time.time-dialogueStart).ToString()};
-        dialogues.Add(s);
+        if (dialogueStart != 0 || dialogueName=="Intro")
+        {
+            string[] s = {dialogueName, (Time.time - dialogueStart).ToString()};
+            dialogues.Add(s);
+            dialogueStart = 0;
+        }
     }
 }
