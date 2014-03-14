@@ -17,6 +17,15 @@ public class Logger : MonoBehaviour {
     static string dialogueName;
     static float dialogueStart;
 
+    static string logDirectory = @"Logs";
+    static string groupDir = System.IO.Path.Combine(logDirectory, "Group.txt");
+    static string keyDir = System.IO.Path.Combine(logDirectory, "Keypoints.txt");
+    //static string dialDir = System.IO.Path.Combine(logDirectory, "DialogueLenghts.txt");
+    static string pickedDir = System.IO.Path.Combine(logDirectory, "PickedItems.txt");
+    static string usedDir = System.IO.Path.Combine(logDirectory,"UsedItems.txt");
+    //static string interactionDir = System.IO.Path.Combine(logDirectory,"Interactions.txt");
+    //static string roomDir = System.IO.Path.Combine(logDirectory,"ChangedRoom.txt");
+
     public int i = 0;
 
     void Awake()
@@ -46,7 +55,7 @@ public class Logger : MonoBehaviour {
         //log the game is closing
         key("Game closed");
 
-        //save log file
+        //save log file (human readable)
         int subject = 0;
         while (File.Exists("subject"+ subject.ToString()+".txt"))
         {
@@ -100,6 +109,145 @@ public class Logger : MonoBehaviour {
         }
 
         sr.Close();
+
+        //save csv logs
+        csvLogs();
+    }
+
+    void csvLogs(){
+        //save log file (csv)
+        checkLogDirectories();
+        Guid guid = Guid.NewGuid();
+        string id = guid.ToString();
+        
+        //group entry
+        StreamWriter sr = System.IO.File.AppendText(groupDir);
+        sr.WriteLine(id + ","+Dialoguer.GetGlobalFloat(1).ToString());
+        sr.Close();
+        
+        //keypoint entry
+        string[] tmp = new string[8];
+        foreach (string[] s in keypoint)
+        {
+            switch (s[0]){
+                case "First time outside":
+                    tmp[0]=s[1];
+                    break;
+                case "Snowman Complete":
+                    tmp[1]=s[1];
+                    break;
+                case "Narrator dialogue":
+                    tmp[2]=s[1];
+                    break;
+                case "Warm":
+                    tmp[3]=s[1];
+                    break;
+                case "Back Outside":
+                    tmp[4]=s[1];
+                    break;
+                case "Last Dialogue":
+                    tmp[5]=s[1];
+                    break;
+                case "Ending":
+                    tmp[6]=s[1];
+                    break;
+                case "Game closed":
+                    tmp[7]=s[1];
+                    break;
+            }
+        }
+        sr = System.IO.File.AppendText(keyDir);
+        sr.Write(id + ",");
+        for (int i = 0; i<tmp.Length; i++)
+        {
+            sr.Write(tmp[i]);
+            if (i!=tmp.Length-1)
+                sr.Write(",");
+        }
+        sr.WriteLine("");
+        sr.Close();
+        
+        //picked items entry
+        tmp = new string[6];
+        foreach (string[] s in pick)
+        {
+            switch (s[0]){
+                case "Eyes":
+                    tmp[0]=s[1];
+                    break;
+                case "Hat":
+                    tmp[1]=s[1];
+                    break;
+                case "Carrot":
+                    tmp[2]=s[1];
+                    break;
+                case "Sticks":
+                    tmp[3]=s[1];
+                    break;
+                case "Gravel":
+                    tmp[4]=s[1];
+                    break;
+                case "Umbrella":
+                    tmp[5]=s[1];
+                    break;
+            }
+        }
+        sr = System.IO.File.AppendText(pickedDir);
+        sr.Write(id + ",");
+        for (int i = 0; i<tmp.Length; i++)
+        {
+            sr.Write(tmp[i]);
+            if (i!=tmp.Length-1)
+                sr.Write(",");
+        }
+        sr.WriteLine("");
+        sr.Close();
+        
+        //used items entry
+        tmp = new string[6];
+        foreach (string[] s in used)
+        {
+            switch (s[0]){
+                case "Eyes":
+                    tmp[0]=s[2];
+                    break;
+                case "Hat":
+                    tmp[1]=s[2];
+                    break;
+                case "Carrot":
+                    tmp[2]=s[2];
+                    break;
+                case "Sticks":
+                    tmp[3]=s[2];
+                    break;
+                case "Gravel":
+                    tmp[4]=s[2];
+                    break;
+                case "Umbrella":
+                    tmp[5]=s[2];
+                    break;
+            }
+        }
+        sr = System.IO.File.AppendText(usedDir);
+        sr.Write(id + ",");
+        for (int i = 0; i<tmp.Length; i++)
+        {
+            sr.Write(tmp[i]);
+            if (i!=tmp.Length-1)
+                sr.Write(",");
+        }
+        sr.WriteLine("");
+        sr.Close();
+    }
+    
+    void checkLogDirectories(){
+        if (!System.IO.Directory.Exists(logDirectory))
+        {
+            System.IO.Directory.CreateDirectory(logDirectory);
+            //System.IO.File.Create(keyDir);
+            //System.IO.File.Create(pickedDir);
+            //System.IO.File.Create(usedDir);
+        }
     }
 
     static public void pickedUp(string item){
