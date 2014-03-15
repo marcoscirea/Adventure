@@ -203,29 +203,31 @@ public class Logger : MonoBehaviour {
         sr.WriteLine("");
         sr.Close();
         
-        //used items entry
+        //used items on snowman entry
         tmp = new string[6];
         foreach (string[] s in used)
         {
-            switch (s[0]){
-                case "Eyes":
-                    tmp[0]=s[2];
-                    break;
-                case "Hat":
-                    tmp[1]=s[2];
-                    break;
-                case "Carrot":
-                    tmp[2]=s[2];
-                    break;
-                case "Sticks":
-                    tmp[3]=s[2];
-                    break;
-                case "Gravel":
-                    tmp[4]=s[2];
-                    break;
-                case "Umbrella":
-                    tmp[5]=s[2];
-                    break;
+            if (s[1]=="Snowman"){
+                switch (s[0]){
+                    case "Eyes":
+                        tmp[0]=s[2];
+                        break;
+                    case "Hat":
+                        tmp[1]=s[2];
+                        break;
+                    case "Carrot":
+                        tmp[2]=s[2];
+                        break;
+                    case "Sticks":
+                        tmp[3]=s[2];
+                        break;
+                    case "Gravel":
+                        tmp[4]=s[2];
+                        break;
+                    case "Umbrella":
+                        tmp[5]=s[2];
+                        break;
+                }
             }
         }
         sr = System.IO.File.AppendText(usedDir);

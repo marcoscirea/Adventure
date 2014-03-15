@@ -86,6 +86,7 @@ public class CustomGui : MonoBehaviour {
 	private void onDialogueInstantlyEndedHandler(){
 		_dialogue = false;
 		_showWindow = false;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().activate();
 	}
 	
 	private void onDialogueTextPhaseHandler(DialoguerTextData data){

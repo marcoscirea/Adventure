@@ -28,4 +28,7 @@ public enum DialoguerDialogues{
 	KeepCold = 25,
 	Umbrella = 26,
 	Kitchen = 27,
+	Moose = 28,
+	KnittingBasket = 29,
+	Flowerbed = 30,
 }

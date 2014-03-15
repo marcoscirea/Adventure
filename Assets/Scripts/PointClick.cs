@@ -15,6 +15,8 @@ public class PointClick : MonoBehaviour {
 	bool nowMove = false;
 	bool objectInteraction = false;
 
+    bool wait = true;
+
     //exit point for next scene
     static Vector3 exitDoor = Vector3.zero;
 
@@ -114,6 +116,15 @@ public class PointClick : MonoBehaviour {
 			
 			if(Vector3.Distance(transform.position, target) < 0.01){
 				
+                //patch to avoid skipping first line of dialogue when already close to the walkpoint
+                if(wait){
+                    wait = false;
+                    return;
+                }
+                else{
+                    wait = true;
+                }
+
 				move = false;
 				
 				if (interactiveobject!=null){
