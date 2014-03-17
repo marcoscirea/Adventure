@@ -110,6 +110,7 @@ public class DialogueManager : MonoBehaviour
         if (warm && !interlude1 && Application.loadedLevelName == "Home")
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>().canMove = false;
+            GameObject.Find("Snow").SetActive(false);
             startDialogue(DialoguerDialogues.Warm);
             warm = false;
 
@@ -202,5 +203,9 @@ public class DialogueManager : MonoBehaviour
     void OnDestroy()
     {
         PlayerPrefs.SetString(GLOBAL_VARIABLE_SAVE_KEY, Dialoguer.GetGlobalVariablesState());
+    }
+
+    public bool isWarm(){
+        return !warm;
     }
 }

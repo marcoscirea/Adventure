@@ -26,7 +26,7 @@ public class Logger : MonoBehaviour {
     //static string interactionDir = System.IO.Path.Combine(logDirectory,"Interactions.txt");
     //static string roomDir = System.IO.Path.Combine(logDirectory,"ChangedRoom.txt");
 
-    public int i = 0;
+    //public int i = 0;
 
     void Awake()
     {

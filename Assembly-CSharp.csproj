@@ -109,8 +109,12 @@
      <Compile Include="Assets\Scripts\Logger.cs" />
      <Compile Include="Assets\Scripts\Pickable.cs" />
      <Compile Include="Assets\Scripts\PointClick.cs" />
+     <Compile Include="Assets\Scripts\Sky.cs" />
+     <Compile Include="Assets\Scripts\Snow.cs" />
+     <Compile Include="Assets\Scripts\Snowman.cs" />
      <Compile Include="Assets\Scripts\SnowmanChangeDialogue.cs" />
      <Compile Include="Assets\Scripts\TCPclient.cs" />
+     <Compile Include="Assets\Title.cs" />
      <None Include="Assets\DialoguerOutput\Resources\dialoguer_data.xml" />
      <None Include="Assets\DialoguerExamples\README.txt" />
   </ItemGroup>

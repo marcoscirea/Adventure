@@ -1,12 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PointClick.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Title.cs">
     <Files>
-      <File FileName="Assets\Scripts\Logger.cs" Line="219" Column="37" />
+      <File FileName="Assets\Title.cs" Line="14" Column="40" />
+      <File FileName="Assets\Scripts\DialogueManager.cs" Line="166" Column="36" />
+      <File FileName="Assets\Scripts\Logger.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\CameraFollow.cs" Line="1" Column="1" />
-      <File FileName="Assets\CustomGui\Scripts\CustomGui.cs" Line="89" Column="90" />
-      <File FileName="Assets\Scripts\DialogueManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PointClick.cs" Line="126" Column="18" />
+      <File FileName="Assets\CustomGui\Scripts\CustomGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PointClick.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Sky.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Pickable.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\LoadingScreen.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
