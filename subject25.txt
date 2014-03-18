@@ -1,0 +1,56 @@
+GROUP 0
+0 = true foreshadowing, 1 = false foreshadowing, 3 = control group
+
+KEYPOINTS
+First time outside, 42.46548
+Snowman Complete, 83.46516
+Narrator dialogue, 87.98064
+Warm, 91.84677
+Back Outside, 111.3733
+Last Dialogue, 134.4916
+Game closed, 147.0253
+
+DIALOGUES LENGHTS
+Intro, 6.606814
+Eyes, 0.9653206
+Umbrella, 0.7261086
+Hat, 1.438698
+Snow, 1.278301
+Carrot, 0.7332458
+Sticks, 0.789257
+Gravel, 1.108383
+Snowman, 0.8937149
+Snowman, 0.4299927
+Snowman, 1.631172
+Interlude, 3.849564
+Warm, 4.654068
+Umbrella, 0.8253326
+KeepCold, 1.414742
+Thesnowmanspeaks, 1.394791
+Thesnowmanspeaks, 8.538605
+
+PICKED ITEMS
+Eyes, 19.76136
+Hat, 36.2249
+Carrot, 48.99094
+Sticks, 61.09873
+Gravel, 64.81487
+Umbrella, 104.4089
+
+USED ITEMS
+Sticks, Snowman, 72.24924
+Gravel, Snowman, 76.3308
+Carrot, Snowman, 79.21462
+Hat, Snowman, 81.39088
+Eyes, Snowman, 83.43519
+Umbrella, Snowman, 134.4648
+
+INTERACTIONS
+Snowman, 72.82654
+Snowman, 74.19867
+Snowman, 131.0825
+Snowman, 136.5942
+
+CHANGED ROOM
+Outside, 39.51934
+Outside, 108.4123

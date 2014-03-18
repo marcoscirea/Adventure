@@ -128,7 +128,7 @@ public class Pickable : Interaction
                     case "Umbrella":
                         //dm.startDialogue(DialoguerDialogues.Thesnowmanspeaks);
                         Dialoguer.SetGlobalBoolean(6, true);
-                        dm.startDialogue(DialoguerDialogues.Thesnowmanspeaks);
+                        //dm.startDialogue(DialoguerDialogues.Thesnowmanspeaks);
                         other.GetComponent<Snowman>().Umbrella();
                         success = true;
                         break;
