@@ -38,8 +38,15 @@ public class LoadingScreen : MonoBehaviour
     {
         if (!NoInstance())
             return;
-        instance.guiTexture.enabled = true;
-        Application.LoadLevel(name);
+        //instance.guiTexture.enabled = true;
+
+        if (GameObject.Find("Fade") != null)
+            GameObject.Find("Fade").GetComponent<SceneFadeInOut>().EndScene(name);
+        else
+        {
+            instance.guiTexture.enabled = true;
+            Application.LoadLevel(name);
+        }
         //instance.guiTexture.enabled = false;
     }
     
@@ -48,5 +55,9 @@ public class LoadingScreen : MonoBehaviour
         if (!instance)
             Debug.LogError("Loading Screen is not existing in scene.");
         return instance;
+    }
+
+    public static void ActivateLoadingScreen(){
+        instance.guiTexture.enabled = true;
     }
 }
