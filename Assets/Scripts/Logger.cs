@@ -13,6 +13,7 @@ public class Logger : MonoBehaviour {
     static ArrayList interacted = new ArrayList();
     static ArrayList keypoint = new ArrayList();
     static ArrayList dialogues = new ArrayList();
+    static ArrayList moods = new ArrayList();
 
     static string dialogueName;
     static float dialogueStart;
@@ -104,6 +105,13 @@ public class Logger : MonoBehaviour {
 
         sr.WriteLine ("CHANGED ROOM");
         foreach (string[] s in go)
+        {
+            sr.WriteLine(s[0]+", "+s[1]);
+        }
+        sr.WriteLine ("");
+        
+        sr.WriteLine ("MOODS");
+        foreach (string[] s in moods)
         {
             sr.WriteLine(s[0]+", "+s[1]);
         }
@@ -289,5 +297,10 @@ public class Logger : MonoBehaviour {
             dialogues.Add(s);
             dialogueStart = 0;
         }
+    }
+
+    static public void mood(string m){
+        string[] s = {m, Time.time.ToString()};
+        moods.Add(s);
     }
 }

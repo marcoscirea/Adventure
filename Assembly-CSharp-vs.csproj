@@ -108,6 +108,8 @@
      <Compile Include="Assets\Scripts\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\LockRotation.cs" />
      <Compile Include="Assets\Scripts\Logger.cs" />
+     <Compile Include="Assets\Scripts\MoodSelector.cs" />
+     <Compile Include="Assets\Scripts\MoodTrigger.cs" />
      <Compile Include="Assets\Scripts\Pickable.cs" />
      <Compile Include="Assets\Scripts\PointClick.cs" />
      <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
