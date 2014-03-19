@@ -4115,7 +4115,7 @@ of every color you can imagine</text>
       <name>The snowman speaks</name>
       <startPage>7</startPage>
       <scrollPosition>
-        <x>1620.27808</x>
+        <x>1362.81445</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -4356,7 +4356,7 @@ of every color you can imagine</text>
           <advanced>true</advanced>
           <metadata />
           <text>I'll become water and if you ever need me I'll be
-in every puddle, lake and sea you see</text>
+in every sea, lake and puddle you see</text>
           <name />
           <portrait />
           <audio />
@@ -6967,7 +6967,7 @@ Oh, and also some arms!</text>
       <name>Interlude1</name>
       <startPage>0</startPage>
       <scrollPosition>
-        <x>1041</x>
+        <x>0</x>
         <y>0</y>
       </scrollPosition>
       <phases>
@@ -6984,7 +6984,7 @@ Oh, and also some arms!</text>
           <advanced>false</advanced>
           <metadata />
           <text>A month passes, and Anne played with 
-Mr Snowman every day, feeling much better than before.</text>
+Mr. Snowman every day, feeling much better than before.</text>
           <name />
           <portrait />
           <audio />
@@ -8342,5 +8342,5 @@ Mr Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>30</currentDialogueId>
+  <currentDialogueId>24</currentDialogueId>
 </DialogueEditorMasterObject>
