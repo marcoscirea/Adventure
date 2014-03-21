@@ -1,0 +1,27 @@
+GROUP 0
+0 = true foreshadowing, 1 = false foreshadowing, 3 = control group
+
+KEYPOINTS
+First time outside, 30.8039
+Game closed, 57.03169
+
+DIALOGUES LENGHTS
+Intro, 22.07353
+Snow, 2.072897
+
+PICKED ITEMS
+
+USED ITEMS
+
+INTERACTIONS
+
+CHANGED ROOM
+Outside, 27.8462
+Home, 36.63125
+Outside, 42.51557
+Home, 51.10865
+
+MOODS
+Sad, 16.84143
+Scared, 34.78321
+Happy, 49.29416
