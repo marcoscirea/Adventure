@@ -117,7 +117,7 @@ public class PointClick : MonoBehaviour {
 			transform.Translate(Vector3.forward *  Time.deltaTime * speed);
 			*/
 
-            transform.position = Vector3.MoveTowards(transform.position, target, speed);
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 			
 			
 			if(Vector3.Distance(transform.position, target) < 0.01){

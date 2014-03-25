@@ -1,0 +1,22 @@
+GROUP 0
+0 = true foreshadowing, 1 = false foreshadowing, 3 = control group
+
+KEYPOINTS
+Game closed, 73.3713
+
+DIALOGUES LENGHTS
+Intro, 9.321849
+Eyes, 0.7509842
+KnittingBasket, 0.9367981
+
+PICKED ITEMS
+Eyes, 66.73916
+
+USED ITEMS
+
+INTERACTIONS
+Knitting Basket, 70.63141
+
+CHANGED ROOM
+
+MOODS
