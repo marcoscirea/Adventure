@@ -11,6 +11,9 @@ public class CustomGui : MonoBehaviour {
 	// Audio
 	public AudioSource audioChoice;
 	public AudioSource audioSelect;
+
+    //Pause dialogue
+    public bool pause = false;
 	
 	// Texture files
 	public Texture ringBase;
@@ -42,7 +45,7 @@ public class CustomGui : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(_showWindow){
+		if(_showWindow && !pause){
 			if(Input.GetMouseButtonDown(0)){
 				if(_choices != null){
 					audioSelect.Play();

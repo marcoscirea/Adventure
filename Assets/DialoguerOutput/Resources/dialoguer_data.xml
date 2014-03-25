@@ -4962,7 +4962,7 @@ in every sea, lake and puddle you see</text>
           </outs>
           <advanced>false</advanced>
           <metadata />
-          <text>It's a crackling fire</text>
+          <text>It might be cozy to have a fire here</text>
           <name />
           <portrait />
           <audio />
@@ -5007,7 +5007,7 @@ in every sea, lake and puddle you see</text>
           </outs>
           <advanced>false</advanced>
           <metadata />
-          <text>Nice and warm!</text>
+          <text>But my parents say it's dangerous</text>
           <name />
           <portrait />
           <audio />
@@ -6510,7 +6510,7 @@ Oh, and also some arms!</text>
           </outs>
           <advanced>false</advanced>
           <metadata />
-          <text>I could use these buttons for the snowman</text>
+          <text>These buttons might be handy</text>
           <name />
           <portrait />
           <audio />
@@ -8342,5 +8342,5 @@ Mr. Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>24</currentDialogueId>
+  <currentDialogueId>20</currentDialogueId>
 </DialogueEditorMasterObject>

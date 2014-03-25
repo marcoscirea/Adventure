@@ -15,7 +15,7 @@ Platform assembly: C:\Users\clelia\Documents\GitHub\Adventure\Snow_Data\Managed\
 Loading C:\Users\clelia\Documents\GitHub\Adventure\Snow_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
 Platform assembly: C:\Users\clelia\Documents\GitHub\Adventure\Snow_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
 Loading C:\Users\clelia\Documents\GitHub\Adventure\Snow_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-- Completed reload, in  1.047 seconds
+- Completed reload, in  1.949 seconds
 desktop: 1280x800 60Hz; virtual: 1280x800 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
@@ -29,7 +29,7 @@ Socket error: System.Net.Sockets.SocketException: Impossibile stabilire la conne
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 1.231701 ms
+UnloadTime: 1.108543 ms
 Socket error: System.Net.Sockets.SocketException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
 
   at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
@@ -41,34 +41,17 @@ Socket error: System.Net.Sockets.SocketException: Impossibile stabilire la conne
 
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 486.
-Total: 4.336797 ms (FindLiveObjects: 0.114372 ms CreateObjectMapping: 0.054986 ms MarkObjects: 0.593855 ms  DeleteObjects: 0.430545 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 552.
+Total: 3.819965 ms (FindLiveObjects: 0.127020 ms CreateObjectMapping: 0.054987 ms MarkObjects: 0.575716 ms  DeleteObjects: 0.173759 ms)
 
 Platform assembly: C:\Users\clelia\Documents\GitHub\Adventure\Snow_Data\Managed\System.Xml.dll (this message is harmless)
 content
  
 (Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
 
-UnloadTime: 78.623772 ms
-Socket error: System.Net.Sockets.SocketException: Impossibile stabilire la connessione. Rifiuto persistente del computer di destinazione.
-
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP, Boolean requireSocketPolicy) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.Socket.Connect (System.Net.EndPoint remoteEP) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.TcpClient.Connect (System.Net.IPEndPoint remote_end_point) [0x00000] in <filename unknown>:0 
-  at System.Net.Sockets.TcpClient.Connect (System.Net.IPAddress[] ipAddresses, Int32 port) [0x00000] in <filename unknown>:0 
+HandleD3DDeviceLost
+  HandleD3DDeviceLost: still lost
+Skipped rendering frame because GfxDevice is in invalid state (device lost)
  
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 513.
-Total: 4.723903 ms (FindLiveObjects: 0.123170 ms CreateObjectMapping: 0.060485 ms MarkObjects: 1.569319 ms  DeleteObjects: 0.138566 ms)
-
-peaceful
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
-
-peaceful
- 
-(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+(Filename:  Line: 1539)
 

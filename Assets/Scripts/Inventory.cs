@@ -27,6 +27,7 @@ public class Inventory : MonoBehaviour {
 	}
 
 	void showUnshow(){
+
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		
 		if (Physics.Raycast(ray, out hit)) {

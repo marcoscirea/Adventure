@@ -17,6 +17,8 @@ public class PointClick : MonoBehaviour {
 
     bool wait = true;
 
+    public GameObject exitPrompt;
+
     //exit point for next scene
     static Vector3 exitDoor = Vector3.zero;
 
@@ -158,6 +160,10 @@ public class PointClick : MonoBehaviour {
         }
         else
             animator.SetBool("isMoving", false);
+
+        //EXIT PROMPT
+        if (Input.GetKeyUp(KeyCode.Escape))
+            GameObject.Instantiate(exitPrompt);
 	}
 
 	void LateUpdate(){
