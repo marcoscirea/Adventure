@@ -6,7 +6,7 @@ public class MoodSelector : MonoBehaviour {
     static string activeMood = "Sad";
     bool idle = true;
     float timerStart;
-    float timerLenght = 3f;
+    float timerLenght = 2f;
 
     private Animator animator;
 
@@ -15,6 +15,9 @@ public class MoodSelector : MonoBehaviour {
         animator = GetComponent<Animator>();
 
         transform.FindChild(activeMood).renderer.sortingOrder = 2;
+
+        transform.position = Camera.main.ViewportToWorldPoint(new Vector3(0.95f, 0.075f));
+        transform.position += new Vector3(0, 0, 1f);
 	}
 	
 	// Update is called once per frame
@@ -44,6 +47,10 @@ public class MoodSelector : MonoBehaviour {
 
         timerStart = 0;
         animator.SetTrigger("BackToIdle");
+        idle = true;
     }
 
+    public void ProlongTimer(){
+        timerStart = Time.time;
+    }
 }

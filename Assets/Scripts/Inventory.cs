@@ -14,9 +14,9 @@ public class Inventory : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
-	}
-	
+        transform.position = new Vector3(transform.position.x, Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height - (Screen.height / 10), Camera.main.nearClipPlane)).y);
+    }
+
 	// Update is called once per frame
 	void Update () {
 
