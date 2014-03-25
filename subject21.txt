@@ -1,0 +1,19 @@
+GROUP 0
+0 = true foreshadowing, 1 = false foreshadowing, 3 = control group
+
+KEYPOINTS
+Game closed, 48.45295
+
+DIALOGUES LENGHTS
+Intro, 30.47573
+
+PICKED ITEMS
+
+USED ITEMS
+
+INTERACTIONS
+
+CHANGED ROOM
+
+MOODS
+Scared, 30.3648

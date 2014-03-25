@@ -18,6 +18,7 @@ public class PointClick : MonoBehaviour {
     bool wait = true;
 
     public GameObject exitPrompt;
+    Exit exitGui;
 
     //exit point for next scene
     static Vector3 exitDoor = Vector3.zero;
@@ -38,6 +39,9 @@ public class PointClick : MonoBehaviour {
             transform.position=new Vector3(exitDoor.x, exitDoor.y, -1);
             exitDoor = Vector3.zero;
         }
+
+        GameObject exit = (GameObject) Instantiate(exitPrompt);
+        exitGui = exit.GetComponent<Exit>();
 	}
 	
 	// Update is called once per frame
@@ -163,7 +167,7 @@ public class PointClick : MonoBehaviour {
 
         //EXIT PROMPT
         if (Input.GetKeyUp(KeyCode.Escape))
-            GameObject.Instantiate(exitPrompt);
+            exitGui.Activate();
 	}
 
 	void LateUpdate(){

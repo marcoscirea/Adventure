@@ -44,7 +44,7 @@ public class MoodTrigger : MonoBehaviour {
         if (!timerOn)
             anim.SetTrigger("OnMouse");
         timerOn = true;
-        timer = Time.time + 1;
+        timer = Time.time + 0.2f;
         gui.pause = true;
 
         m.ProlongTimer();
