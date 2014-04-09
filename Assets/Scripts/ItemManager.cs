@@ -19,7 +19,6 @@ public class ItemManager : MonoBehaviour {
 	public void activateObjects(string message){
 		switch (message) {
 		case "snowmanComplete":
-			Debug.Log(Dialoguer.GetGlobalBoolean(5));
 			if (GameObject.Find("Umbrella")!=null)
 				GameObject.Find("Umbrella").GetComponent<Pickable>().isActive=true;
 			break;

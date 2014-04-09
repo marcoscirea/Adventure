@@ -3,13 +3,12 @@ using System.Collections;
 
 public abstract class Interaction : MonoBehaviour {
 
-	public DialogueManager dm;
+
 	public Vector3 walkpoint;
 	//Vector3 initScale;
 
 	// Use this for initialization
 	void Start () {
-		dm = GameObject.Find("Dialogue Manager").GetComponent<DialogueManager>();
 		walkpoint=transform.FindChild("Walk Point").transform.position;
 		//initScale = transform.localScale;
 		doStart ();

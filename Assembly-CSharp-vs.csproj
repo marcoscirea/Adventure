@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CustomGui\Scripts\CustomGui.cs" />
      <Compile Include="Assets\Dialogue System\Examples\Feature Demo\FeatureDemo.cs" />
      <Compile Include="Assets\Dialogue System\Examples\Feature Demo\Multiple Database Example\AddRemoveDatabaseTrigger.cs" />
      <Compile Include="Assets\Dialogue System\Examples\Lua Example\LuaExample.cs" />
@@ -71,59 +70,10 @@
      <Compile Include="Assets\Dialogue System\Scripts\Templates\TemplateDialogueUI.cs" />
      <Compile Include="Assets\Dialogue System\Scripts\Templates\TemplateQuestLogWindow.cs" />
      <Compile Include="Assets\Dialogue System\Scripts\Templates\TemplateTextFieldUI.cs" />
-     <Compile Include="Assets\Dialogue.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\DialogueObjects\DialogueEditorDialogueObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\DialogueObjects\DialogueEditorDragPhaseObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\DialogueObjects\DialogueEditorGlobalVariablesContainer.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\DialogueObjects\DialogueEditorMasterObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\DialogueObjects\DialogueEditorPhaseObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\DialogueObjects\DialogueEditorSelectionObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\ThemeObjects\DialogueEditorThemeObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\ThemeObjects\DialogueEditorThemesContainer.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\VariableObjects\DialogueEditorVariableObject.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Objects\VariableObjects\DialogueEditorVariablesContainer.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Statics\DialogueEditorStatics.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Statics\DialogueEditorWaitTypes.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Statics\VariableEditorGetEquation.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Statics\VariableEditorScopes.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Statics\VariableEditorSetEquation.cs" />
-     <Compile Include="Assets\Dialoguer\DialogueEditor\Scripts\Statics\VariableEditorTypes.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Core\Dialoguer.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Core\DialoguerDialogueManager.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Core\DialoguerEventManager.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Managers\DialoguerDataManager.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Monobehaviours\WaitPhaseComponent.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Objects\DialoguerData.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Objects\DialoguerDialogue.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Objects\DialoguerGlobalVariables.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Objects\DialoguerTextData.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Objects\DialoguerTheme.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Objects\DialoguerVariables.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\AbstractDialoguePhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\BranchedTextPhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\ConditionalPhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\EmptyPhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\EndPhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\SendMessagePhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\SetVariablePhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\TextPhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Phases\WaitPhase.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Statics\DialoguerTextPhaseType.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Statics\PhaseState.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Statics\PhaseVarSubStrings.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Utilities\DialoguerSerializableDictionary.cs" />
-     <Compile Include="Assets\Dialoguer\Dialoguer\Scripts\Utilities\DialoguerUtils.cs" />
-     <Compile Include="Assets\DialoguerExamples\NextGen RPG\Scripts\NextGenRpgDialogueGui.cs" />
-     <Compile Include="Assets\DialoguerExamples\Old School RPG\Scripts\OldSchoolRPGDialogueGUI.cs" />
-     <Compile Include="Assets\DialoguerExamples\Scripts\DialoguerTestSceneMain.cs" />
-     <Compile Include="Assets\DialoguerExamples\Scripts\DialogueriTween.cs" />
-     <Compile Include="Assets\DialoguerExamples\Scripts\UnityDefaultGuiManager.cs" />
-     <Compile Include="Assets\DialoguerOutput\Enums\DialoguerDialogues.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\Depth.cs" />
      <Compile Include="Assets\Scripts\Dialogue.cs" />
-     <Compile Include="Assets\Scripts\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
      <Compile Include="Assets\Scripts\Exit.cs" />
      <Compile Include="Assets\Scripts\EyeBlink.cs" />
@@ -133,17 +83,9 @@
      <Compile Include="Assets\Scripts\ItemManager.cs" />
      <Compile Include="Assets\Scripts\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\LockRotation.cs" />
-     <Compile Include="Assets\Scripts\Logger.cs" />
-     <Compile Include="Assets\Scripts\MoodSelector.cs" />
-     <Compile Include="Assets\Scripts\MoodTrigger.cs" />
      <Compile Include="Assets\Scripts\Pickable.cs" />
      <Compile Include="Assets\Scripts\PointClick.cs" />
      <Compile Include="Assets\Scripts\SceneFadeInOut.cs" />
-     <Compile Include="Assets\Scripts\Sky.cs" />
-     <Compile Include="Assets\Scripts\Snow.cs" />
-     <Compile Include="Assets\Scripts\Snowman.cs" />
-     <Compile Include="Assets\Scripts\SnowmanChangeDialogue.cs" />
-     <Compile Include="Assets\Scripts\TCPclient.cs" />
      <Compile Include="Assets\Scripts\Title.cs" />
      <None Include="Assets\Dialogue System\_README.txt" />
      <None Include="Assets\Dialogue System\Examples\Bark Example\Three NPCs Bark\_README.txt" />
@@ -177,7 +119,6 @@
      <None Include="Assets\Dialogue System\Prefabs\Unity Dialogue UIs\Necromancer\Necromancer GUI\Readme.txt" />
      <None Include="Assets\Dialogue System\Scripts\Supplemental\Utility\_README.txt" />
      <None Include="Assets\Dialogue System\KopiLua\_README.txt" />
-     <None Include="Assets\DialoguerOutput\Resources\dialoguer_data.xml" />
      <None Include="Assets\Dialogue System\Scripts\_README.txt" />
      <None Include="Assets\Dialogue System\Examples\Feature Demo\Feature Demo with Continue Button\_README.txt" />
      <None Include="Assets\Dialogue System\Prefabs\Unity Dialogue UIs\Wheel\_README.txt" />
@@ -185,24 +126,23 @@
      <None Include="Assets\Dialogue System\Prefabs\Unity Dialogue UIs\Shared Fonts\Orbitron\SIL Open Font License.txt" />
      <None Include="Assets\Dialogue System\Prefabs\Unity Dialogue UIs\Shared Textures\_README.txt" />
      <None Include="Assets\Dialogue System\Prefabs\_README.txt" />
-     <None Include="Assets\DialoguerExamples\README.txt" />
      <None Include="Assets\Dialogue System\Examples\Feature Demo\Menu Text Demo\_README.txt" />
      <None Include="Assets\Dialogue System\Examples\Feature Demo\Articy Feature Demo\Articy Feature Demo.xml" />
      <None Include="Assets\Dialogue System\_README_STUDENT_LICENSE.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>
- <Reference Include="KopiLua">
- <HintPath>Assets\Dialogue System\KopiLua\Plugins\KopiLua.dll</HintPath>
- </Reference>
  <Reference Include="DialogueSystem">
  <HintPath>Assets\Dialogue System\DLLs\DialogueSystem.dll</HintPath>
  </Reference>
- <Reference Include="KopiLuaInterface">
- <HintPath>Assets\Dialogue System\KopiLua\Plugins\KopiLuaInterface.dll</HintPath>
+ <Reference Include="KopiLua">
+ <HintPath>Assets\Dialogue System\KopiLua\Plugins\KopiLua.dll</HintPath>
  </Reference>
  <Reference Include="KopiLuaDll">
  <HintPath>Assets\Dialogue System\KopiLua\Plugins\KopiLuaDll.dll</HintPath>
+ </Reference>
+ <Reference Include="KopiLuaInterface">
+ <HintPath>Assets\Dialogue System\KopiLua\Plugins\KopiLuaInterface.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

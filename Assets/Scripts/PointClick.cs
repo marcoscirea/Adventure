@@ -22,8 +22,6 @@ public class PointClick : MonoBehaviour {
     //exit point for next scene
     static Vector3 exitDoor = Vector3.zero;
 
-	TCPclient client;
-
     private Animator animator;
 
 	// Use this for initialization

@@ -10,7 +10,6 @@ public class Exit : MonoBehaviour {
 
     bool playerMoveStatus;
     PointClick playerControl;
-    CustomGui gui;
 
     bool show = false;
 
@@ -18,7 +17,6 @@ public class Exit : MonoBehaviour {
 	void Start () {
 
         playerControl = GameObject.FindGameObjectWithTag("Player").GetComponent<PointClick>();
-        gui = GameObject.FindGameObjectWithTag("Gui").GetComponent<CustomGui>();
 
         center_x = (Screen.width / 2);
         center_y = (Screen.height / 2);
@@ -40,7 +38,6 @@ public class Exit : MonoBehaviour {
             if (GUI.Button(new Rect(center_x + 10, center_y - 10, 80, 20), "Not yet"))
             {
                 playerControl.canMove = playerMoveStatus;
-                gui.pause = false;
                 Time.timeScale = 1f;
                 show = false;
             }
@@ -54,12 +51,10 @@ public class Exit : MonoBehaviour {
         {
             playerMoveStatus = playerControl.canMove;
             playerControl.canMove = false;
-            gui.pause = true;
             Time.timeScale = 0;
         } else
         {
             playerControl.canMove = playerMoveStatus;
-            gui.pause = false;
             Time.timeScale = 1f;
             show = false;
         }
