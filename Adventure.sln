@@ -9,6 +9,8 @@ Project("{DC1D2A4D-5918-57F0-A0DD-38B4EBCF5A72}") = "Adventure", "Assembly-CShar
 EndProject
 Project("{DC1D2A4D-5918-57F0-A0DD-38B4EBCF5A72}") = "Adventure", "Assembly-UnityScript-firstpass.unityproj", "{7323DEE6-54AF-9DFB-FD8B-640C8969C33A}"
 EndProject
+Project("{DC1D2A4D-5918-57F0-A0DD-38B4EBCF5A72}") = "Adventure", "Assembly-UnityScript.unityproj", "{C0BC5F41-7082-443A-55C9-6F4E968EB4C9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +33,15 @@ Global
 		{7323DEE6-54AF-9DFB-FD8B-640C8969C33A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7323DEE6-54AF-9DFB-FD8B-640C8969C33A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7323DEE6-54AF-9DFB-FD8B-640C8969C33A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0BC5F41-7082-443A-55C9-6F4E968EB4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0BC5F41-7082-443A-55C9-6F4E968EB4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0BC5F41-7082-443A-55C9-6F4E968EB4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0BC5F41-7082-443A-55C9-6F4E968EB4C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

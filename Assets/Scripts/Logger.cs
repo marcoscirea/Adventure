@@ -65,7 +65,7 @@ public class Logger : MonoBehaviour {
         StreamWriter sr = File.CreateText("subject"+subject.ToString()+".txt");
 
         sr.WriteLine("GROUP " + Dialoguer.GetGlobalFloat(1).ToString());
-        sr.WriteLine("0 = true foreshadowing, 1 = false foreshadowing, 3 = control group");
+        sr.WriteLine("0 = true foreshadowing, 1 = false foreshadowing, 2 = control group");
         sr.WriteLine("");
 
         sr.WriteLine ("KEYPOINTS");

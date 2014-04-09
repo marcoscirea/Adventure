@@ -17,7 +17,6 @@ public class PointClick : MonoBehaviour {
 
     bool wait = true;
 
-    public GameObject exitPrompt;
     Exit exitGui;
 
     //exit point for next scene
@@ -40,8 +39,7 @@ public class PointClick : MonoBehaviour {
             exitDoor = Vector3.zero;
         }
 
-        GameObject exit = (GameObject) Instantiate(exitPrompt);
-        exitGui = exit.GetComponent<Exit>();
+        exitGui = GameObject.FindGameObjectWithTag("ExitPrompt").GetComponent<Exit>();
 	}
 	
 	// Update is called once per frame
