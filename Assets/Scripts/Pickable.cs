@@ -41,7 +41,7 @@ public class Pickable : Interaction
             if (isActive)
             {
                 inventory.addItem(gameObject);
-                //GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
+                GameObject.FindGameObjectWithTag ("Player").GetComponent<PointClick> ().activate ();
                 inInventory = true;
 
                 //Picking up animation
