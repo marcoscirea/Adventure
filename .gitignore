@@ -57,7 +57,7 @@ build/
 *_i.c
 *_p.c
 *.ilk
-*.meta
+#*.meta
 *.obj
 *.pch
 *.pdb
@@ -217,7 +217,6 @@ pip-log.txt
 #############
 ## Unity
 #############
-
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/

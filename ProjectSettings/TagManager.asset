@@ -10,7 +10,6 @@ TagManager:
   - ExitPrompt
   - FadeAndLoad
   - Loading
-  - Waypoint
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
