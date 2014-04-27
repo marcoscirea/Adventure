@@ -10,6 +10,7 @@ public class PointClick : MonoBehaviour
     public float yadjust = 1f;
     public bool canMove = true;
     RaycastHit hit;
+    ArrayList path;
 
     //interaction variables
     Interaction interactiveobject = null;
@@ -24,6 +25,7 @@ public class PointClick : MonoBehaviour
     //external references
     Exit exitGui;
     private Animator animator;
+    Pathfinding pathfinding;
 
     //exit point for next scene
     static Vector3 exitDoor = Vector3.zero;
@@ -36,6 +38,7 @@ public class PointClick : MonoBehaviour
         //get references
         animator = GetComponent<Animator>();
         exitGui = GameObject.FindGameObjectWithTag("ExitPrompt").GetComponent<Exit>();
+        pathfinding = GameObject.FindGameObjectWithTag("Path").GetComponent<Pathfinding>();
 
         //move player to starting position if existing
         if (exitDoor != Vector3.zero)
@@ -52,107 +55,24 @@ public class PointClick : MonoBehaviour
         //management of interruptable actions (mostly walk to a new place while walking towards another destination)
         if (canMove)
         {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hit))
-                {
-
-                    //clicked on a walkable area
-                    if (hit.collider.tag == "Walkable")
-                    {
-                        move = true;    
-                        target = new Vector3(hit.point.x, hit.point.y + yadjust, -1);
-                    }
-
-                    //clicked on an interactive object
-                    if (hit.collider.tag == "Interactive")
-                    {
-                        interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
-
-                        //if the object is not an item in the inventory walk to its walkpoint
-                        if (hit.collider.gameObject.GetComponent<Pickable>() == null || 
-                            !hit.collider.gameObject.GetComponent<Pickable>().inInventory)
-                        {
-                            target = interactiveobject.getWalkPoint();
-                            target.z = -1;
-                            move = true;
-                        }
-                        //else just start interaction
-                        else
-                        {
-                            canMove = false;
-                            interaction();
-                        }
-                    }
-                }   
-            }
+			checkForMoveCommand();
         } 
-        //management of ations not interruptable by walking
+        //management of actions not interruptable by walking
         else
         {
             //if the player is trying to use an item on something else, we control where the raycast hits
             if (selectedItem != null)
             {
-                if (Input.GetMouseButtonDown(0))
-                {
-                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                    
-                    if (Physics.Raycast(ray, out hit))
-                    {
-                        //if the ray hits an other interactive object we walk to that object and set the flag objectInteraction
-                        if (hit.collider.tag == "Interactive")
-                        {
-                            interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
-                            target = interactiveobject.getWalkPoint();
-                            target.z = -1;
-                            move = true;
-                            objectInteraction = true;
-                        }
-                    }
-                }
-                //if the player presses the right mouse button we call the secondary function for the selected object and re-enable movement
-                if (Input.GetMouseButtonDown(1))
-                {
-                    selectedItem.GetComponent<Pickable>().secondary();
-                    activate();
-                }
+				checkForUseObject();
+
+				checkForSecondaryAction();
             }
         }
 
         //if we have to move to target
         if (move)
         {
-            //move to target with specified speed
-            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
-            
-            //if we are close to target
-            if (Vector3.Distance(transform.position, target) < 0.01)
-            {
-
-                move = false;
-
-                //if we clicked on an interactive object
-                if (interactiveobject != null)
-                {
-                    if (!objectInteraction)
-                    {
-                        //normal interaction (dialogue, pickup, etc.)
-                        canMove = false;
-                        interaction();
-                    } else
-                    {
-                        //Object interaction
-                        selectedItem.GetComponent<Pickable>().useWith(interactiveobject.gameObject);
-                        activate();
-                        selectedItem = null;
-                        objectInteraction = false;
-                    }
-
-                }
-                
-            }   
+			goToTarget();   
         }
 
         //ANIMATOR CODE
@@ -204,4 +124,116 @@ public class PointClick : MonoBehaviour
         exitDoor = door;
     }
 
+	void checkForMoveCommand(){
+		if (Input.GetMouseButtonDown(0))
+		{
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			
+			if (Physics.Raycast(ray, out hit))
+			{
+				
+				//clicked on a walkable area
+				if (hit.collider.tag == "Walkable")
+				{
+					move = true;    
+					target = new Vector3(hit.point.x, hit.point.y + yadjust, -1);
+                    path = new ArrayList();
+                    path = pathfinding.Path(transform.position, target);
+				}
+				
+				//clicked on an interactive object
+				if (hit.collider.tag == "Interactive")
+				{
+					interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
+					
+					//if the object is not an item in the inventory walk to its walkpoint
+					if (hit.collider.gameObject.GetComponent<Pickable>() == null || 
+					    !hit.collider.gameObject.GetComponent<Pickable>().inInventory)
+					{
+						target = interactiveobject.getWalkPoint();
+						target.z = -1;
+						move = true;
+					}
+					//else just start interaction
+					else
+					{
+						canMove = false;
+						interaction();
+					}
+				}
+			}   
+		}
+	}
+
+	void checkForUseObject(){
+		if (Input.GetMouseButtonDown(0))
+		{
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			
+			if (Physics.Raycast(ray, out hit))
+			{
+				//if the ray hits an other interactive object we walk to that object and set the flag objectInteraction
+				if (hit.collider.tag == "Interactive")
+				{
+					interactiveobject = hit.collider.gameObject.GetComponent<Interaction>();
+					target = interactiveobject.getWalkPoint();
+					target.z = -1;
+					move = true;
+					objectInteraction = true;
+				}
+			}
+		}
+	}
+
+	void checkForSecondaryAction(){
+		//if the player presses the right mouse button we call the secondary function for the selected object and re-enable movement
+		if (Input.GetMouseButtonDown(1))
+		{
+			selectedItem.GetComponent<Pickable>().secondary();
+			activate();
+		}
+	}
+
+	void goToTarget(){
+        //follow the path
+        if (path.Count != 0 )
+        {
+            //move to first element of path
+            transform.position = Vector3.MoveTowards(transform.position, (Vector3) path[0], speed * Time.deltaTime);
+            //if we're close remove element
+            if (Vector3.Distance(transform.position, (Vector3) path[0]) < 0.01){
+                path.Remove(path[0]);
+            }
+        } else
+        {
+            //move to target with specified speed
+            transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
+		
+            //if we are close to target
+            if (Vector3.Distance(transform.position, target) < 0.01)
+            {
+			
+                move = false;
+			
+                //if we clicked on an interactive object
+                if (interactiveobject != null)
+                {
+                    if (!objectInteraction)
+                    {
+                        //normal interaction (dialogue, pickup, etc.)
+                        canMove = false;
+                        interaction();
+                    } else
+                    {
+                        //Object interaction
+                        selectedItem.GetComponent<Pickable>().useWith(interactiveobject.gameObject);
+                        activate();
+                        selectedItem = null;
+                        objectInteraction = false;
+                    }
+				
+                }   
+            }
+        }
+	}
 }

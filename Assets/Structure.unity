@@ -141,9 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   neighbor_nodes:
-  - {fileID: 1020035626}
-  - {fileID: 1694681061}
   - {fileID: 1871140775}
+  - {fileID: 1694681061}
   pos: {x: 0, y: 0, z: 0}
   dist: 0
   previous: {fileID: 0}
@@ -883,7 +882,7 @@ GameObject:
   - 114: {fileID: 1421977983}
   m_Layer: 0
   m_Name: Pathfinding
-  m_TagString: Untagged
+  m_TagString: Path
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -899,11 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e756c6ae918a14fb13ab1e736a273b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nodesObj:
-  - {fileID: 1694681061}
-  - {fileID: 1020035626}
-  - {fileID: 28245123}
-  - {fileID: 1871140775}
+  nodesObj: []
   s: {fileID: 1871140775}
   go: {fileID: 1694681061}
 --- !u!4 &1421977984
@@ -1502,9 +1497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd53ef2f26e82e46b1d74fc87d3fff8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neighbor_nodes:
-  - {fileID: 1020035626}
-  - {fileID: 28245123}
+  neighbor_nodes: []
   pos: {x: 0, y: 0, z: 0}
   dist: 0
   previous: {fileID: 0}
