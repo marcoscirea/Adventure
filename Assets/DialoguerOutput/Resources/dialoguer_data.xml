@@ -2910,8 +2910,8 @@ the Dialoguer system!</text>
       <name>Intro</name>
       <startPage>0</startPage>
       <scrollPosition>
-        <x>0</x>
-        <y>420</y>
+        <x>1566.90735</x>
+        <y>0</y>
       </scrollPosition>
       <phases>
         <DialogueEditorPhaseObject>
@@ -3109,7 +3109,7 @@ of every color you can imagine</text>
           </outs>
           <advanced>false</advanced>
           <metadata />
-          <text>I can't see any of my friends and it's aways cold...</text>
+          <text>I can't see any of my friends and it's always cold...</text>
           <name />
           <portrait />
           <audio />
@@ -8342,5 +8342,5 @@ Mr. Snowman every day, feeling much better than before.</text>
     <x>0</x>
     <y>0</y>
   </selectorScrollPosition>
-  <currentDialogueId>20</currentDialogueId>
+  <currentDialogueId>8</currentDialogueId>
 </DialogueEditorMasterObject>

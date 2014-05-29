@@ -149,11 +149,12 @@ public class CustomGui : MonoBehaviour {
 		
 		//int textY = (_choices == null) ? 100 : 260;
 		int textY = 260;
-		Rect textRect = new Rect(Screen.width*0.5f - 300, Screen.height - textY, 600, 80);
+		Rect textRect = new Rect(Screen.width*0.5f - 400, Screen.height - textY, 800, 160);
 		//GUI.Box(textRect, string.Empty);
 		
 		GUIStyle style = new GUIStyle("label");
 		style.alignment = TextAnchor.MiddleCenter;
+		style.fontSize = 30;
 		drawText(_text, textRect, style);
 		
 		if(_choices != null){
