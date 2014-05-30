@@ -1,0 +1,5 @@
+#Set here which group playthrough do you want:
+#Group 0 is true foreshadowing
+#Group 1 is false foreshadowing
+#Group 2 is the control group
+Group=0
