@@ -2,4 +2,4 @@
 #Group 0 is true foreshadowing
 #Group 1 is false foreshadowing
 #Group 2 is the control group
-Group=0
+Group=2

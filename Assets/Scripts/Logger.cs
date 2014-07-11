@@ -18,6 +18,7 @@ public class Logger : MonoBehaviour {
     static string dialogueName;
     static float dialogueStart;
 
+	static string groupPath;
     static string logDirectory = @"Logs";
     static string groupDir = System.IO.Path.Combine(logDirectory, "Group.txt");
     static string keyDir = System.IO.Path.Combine(logDirectory, "Keypoints.txt");
@@ -53,16 +54,24 @@ public class Logger : MonoBehaviour {
     }
 
     void OnApplicationQuit(){
+		//select correct group folder
+		groupPath = @"Group" + GameObject.Find("Dialogue Manager").GetComponent<DialogueManager> ().group;
+		checkGroupDirectories ();
+		groupDir = System.IO.Path.Combine(groupPath,groupDir);
+		keyDir = System.IO.Path.Combine(groupPath,keyDir);
+		pickedDir = System.IO.Path.Combine(groupPath, pickedDir);
+		usedDir = System.IO.Path.Combine(groupPath, usedDir);
+
         //log the game is closing
         key("Game closed");
 
         //save log file (human readable)
         int subject = 0;
-        while (File.Exists("subject"+ subject.ToString()+".txt"))
+        while (File.Exists(System.IO.Path.Combine(groupPath, "subject"+ subject.ToString()+".txt")))
         {
             subject++;
         }
-        StreamWriter sr = File.CreateText("subject"+subject.ToString()+".txt");
+		StreamWriter sr = File.CreateText(System.IO.Path.Combine(groupPath, "subject"+subject.ToString()+".txt"));
 
         sr.WriteLine("GROUP " + Dialoguer.GetGlobalFloat(1).ToString());
         sr.WriteLine("0 = true foreshadowing, 1 = false foreshadowing, 3 = control group");
@@ -251,14 +260,21 @@ public class Logger : MonoBehaviour {
     }
     
     void checkLogDirectories(){
-        if (!System.IO.Directory.Exists(logDirectory))
+		if (!System.IO.Directory.Exists(System.IO.Path.Combine(groupPath, logDirectory)))
         {
-            System.IO.Directory.CreateDirectory(logDirectory);
+			System.IO.Directory.CreateDirectory(System.IO.Path.Combine(groupPath, logDirectory));
             //System.IO.File.Create(keyDir);
             //System.IO.File.Create(pickedDir);
             //System.IO.File.Create(usedDir);
         }
     }
+
+	void checkGroupDirectories(){
+		if (!System.IO.Directory.Exists(groupPath))
+		{
+			System.IO.Directory.CreateDirectory(groupPath);
+		}
+		}
 
     static public void pickedUp(string item){
         string[] s = {item, Time.time.ToString()};
